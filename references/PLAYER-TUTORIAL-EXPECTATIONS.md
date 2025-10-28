@@ -33,6 +33,8 @@ This document outlines expectations for the player tutorial system in The Leviat
   - Economy basics (ATEC licenses, trading)
   - Faction and reputation systems
   - Safety protocols and risk zones
+  - Crime and punishment mechanics (contraband detection, fines, KOS orders)
+  - Economic and political systems (tax rates, mining rights, corporate/house/empire interactions)
 - Interactive elements (NPC guides, tooltips, event triggers)
 - Feedback collection for continuous improvement
 

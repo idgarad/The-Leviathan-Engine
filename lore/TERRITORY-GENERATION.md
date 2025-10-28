@@ -167,7 +167,7 @@ This approach produces a territory with:
 - Unlike the ISC star gate network, the wormhole territory is 'flat'—there are no arrays or regions, just a single undifferentiated network of systems.
 - There are no communications arrays in wormhole territories; communication is limited to ship-to-ship comms only, increasing isolation and risk.
 - Distances between wormhole systems are unknown; they may all reside in the same galaxy or be spread across millions of galaxies.
-- Initially, there are no habitable worlds or colonies in wormhole space.
+- Wormhole systems may contain habitable planets, but there are no humans present initially. Players may start colonies during a campaign.
 - Wormholes between ISC territory and wormhole territory are unstable, appearing randomly for random durations and called unstable wormholes.
 - The gates that link wormhole systems to each other are static and persistent.
 - A common discovery in wormhole space is the ruins of lost colonies—sites where people once attempted to settle but ultimately failed. These ruins exhibit peculiar and unsettling features: some are impossibly ancient, others disturbingly new (e.g., a still-hot cup of coffee on the table with no one present). Some show evidence of attacks, while others are perfectly intact with no one present. These phenomena reinforce the cosmic horror themes that permeate wormhole space.

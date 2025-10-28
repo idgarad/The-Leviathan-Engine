@@ -30,6 +30,7 @@ This document outlines the initial experience for new players entering The Levia
   - Accepting and managing contracts
   - Intelligence operations (spy craft)
   - Crime and punishment mechanics
+    - Certain contraband may be detected and confiscated when jumping through gates or docking at stations; fines may be applied. Players with very low standing may be marked for 'Kill On Sight' orders.
   - Communication systems
   - Contract and mission mechanics
   - Economy basics (ATEC licenses, trading)
@@ -56,6 +57,7 @@ This document outlines the initial experience for new players entering The Levia
      - Player chooses a name in their language (e.g., "The Black Blade of Doom").
      - Name is parsed and translated into the selected ethnic group's native language (e.g., Uthank Madulri).
      - Character has alternate names in other languages (e.g., Greyspeak: Uthank Madulri, Bluespeak: Kovo Acktu).
+     - The language engine will offer a limited selection of nouns and verbs for players, reserving the rest for NPCs.
 
 2. **Clan Hall Placement**
    - Player is placed in their clan hall upon character creation.
