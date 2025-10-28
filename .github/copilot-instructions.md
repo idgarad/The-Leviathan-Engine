@@ -424,6 +424,7 @@ Persistent player data (database storage)
 
 ## AI Assistant Guidelines
 
+
 ### Code Generation Preferences
 1. **Favor simplicity** - Use standard Go patterns, avoid complex abstractions
 2. **Include examples** - Every function should have usage examples in comments  
@@ -433,10 +434,11 @@ Persistent player data (database storage)
 6. **Metrics integration** - Every component should expose performance metrics (BTOP-style)
 7. **Terminal-friendly interfaces** - Clean, efficient status displays like tmux
 8. **KPI-driven development** - Include measurable success criteria for all features
+9. **Tips & Tricks Documentation** - Whenever you have practical infrastructure, engine, or workflow advice (e.g., multi-node Docker setup, VM strategies, debugging tips), add a new markdown file to `references/tips_tricks/` with clear, actionable guidance. Keep this folder up to date as a living resource for the team.
 
 ### Documentation Generation
 When creating new features:
-9. Ensure every section includes an update notice, further reading links, and book recommendations as described above.
+10. Ensure every section includes an update notice, further reading links, and book recommendations as described above.
 
 ### Automated Testing Requirements
 Every feature must include:

@@ -12,12 +12,26 @@ This roadmap establishes the foundational infrastructure needed before beginning
 
 ## Phase 1: Core Development Infrastructure (Week 1-2)
 
-> **NOTICE:** Steps in this section reflect best practices as of October 2025. Always verify with official documentation for updates.
-> 
+### Prerequisite: Install Essential Development Tools
+Before proceeding to Priority 1A and 1B, ensure the following tools are installed on all development and infrastructure hosts:
+
+- **Docker**: https://docs.docker.com/get-docker/
+  - Install Docker Engine for your OS (Linux, Windows, Mac)
+  - Add your user to the `docker` group (Linux)
+- **Docker Compose**: https://docs.docker.com/compose/
+  - Included with most Docker installations; verify with `docker compose version`
+- **Git**: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+  - Required for repository management and CI/CD
+- **SSH**: https://www.openssh.com/
+  - For secure remote access and key management
+- **Postfix & mailutils** (for GitLab notifications):
+  - Install via your OS package manager
+
 > **For additional information, please see:**
-> - GitLab CE Docs: https://docs.gitlab.com/ee/install/
-> - Proxmox Cloud-Init: https://pve.proxmox.com/wiki/Cloud-Init_Support
-> - [Book] "The DevOps Handbook" by Gene Kim et al.
+> - Docker Docs: https://docs.docker.com/get-docker/
+> - Docker Compose: https://docs.docker.com/compose/
+> - Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+> - SSH: https://www.openssh.com/
 
 ### Priority 1A: Dual Repository Strategy - GitLab + GitHub
 ### GitLab Community Edition (CE) Installation Notes
