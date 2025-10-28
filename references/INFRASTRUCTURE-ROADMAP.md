@@ -255,6 +255,12 @@ leviathan-engine/
 │   └── sync-to-github.sh      # GitHub mirror sync script
 ├── docs/                      # Documentation (public on GitHub)
 ├── references/                # Development references (public)
+│   ├── TERRITORY-GENERATION.md
+│   ├── THE-NEW-PLAYER-EXPERIENCE.md
+│   ├── PLAYER-TUTORIAL-EXPECTATIONS.md
+│   ├── CODING-ROADMAP.md
+│   ├── INFRASTRUCTURE-ROADMAP.md
+│   └── [other reference docs]
 └── [Go project structure]     # Actual engine code
 ```
 
