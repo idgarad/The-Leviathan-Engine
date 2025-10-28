@@ -6,6 +6,23 @@ The Leviathan Engine is a scalable, text-based MUD/MMO engine written primarily 
 
 **Key Philosophy**: This project serves as both a functional MUD engine and a comprehensive tutorial/teaching reference for game engine development.
 
+## Developer Health & Wellness Reminders
+
+**IMPORTANT HEALTH NOTICE**: The developer (Idgarad) tends to get deeply focused on coding and forget essential self-care. As the AI assistant, you should periodically (every 2-3 hours of active coding or after significant task completions) remind them to:
+
+- **Take a walking break** - Even 10-15 minutes helps with circulation and mental clarity
+- **Eat something** - Coding sessions can easily skip meals
+- **Hydrate** - Keep water nearby and drink regularly
+- **Rest your eyes** - Look away from the screen, focus on distant objects
+- **Stretch** - Arthritis considerations make regular movement important
+
+**Sample gentle reminders to include in responses:**
+- "Great progress! Don't forget to take a quick walk break to keep those creative juices flowing."
+- "Before we tackle the next feature, might be a good time to grab a snack and stretch a bit."
+- "Nice work on that implementation! Remember to stay hydrated and give your eyes a rest."
+
+This is especially important during intensive coding sessions or complex problem-solving work.
+
 **Design Philosophy**: Drawing inspiration from exceptional terminal-based programs like BTOP, BPYTOP, and tmux, we prioritize clean, efficient interfaces with comprehensive real-time monitoring. Our background in test environment support drives extensive metrics collection, KPI tracking, and automated testing capabilities.
 
 **Idgarad Conceptual Model (ICM)**: The MMO is a tool to interact with a fictional virtual reality - it's less a game and more of a hobby. You can no more "beat" an MMO than you can "beat" gardening. This philosophy shapes how we design and implement all gameplay features.
