@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Leviathan Engine - Infrastructure Roadmap Checklist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #222;
+      margin: 0;
+      padding: 0 1em 2em 1em;
+    }
+    h1, h2, h3 {
+      color: #1a237e;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    .checklist {
+      margin: 2em 0 2em 0;
+      padding: 1em;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      background: #f9f9f9;
+      max-width: 900px;
+    }
+    .checklist label {
+      display: flex;
+      align-items: center;
+      font-size: 1.1em;
+      margin-bottom: 0.5em;
+      cursor: pointer;
+    }
+    .checklist input[type="checkbox"] {
+      margin-right: 0.8em;
+      width: 1.2em;
+      height: 1.2em;
+    }
+    .svg-flow {
+      display: block;
+      margin: 2em auto;
+      max-width: 100%;
+      background: #fff;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+    }
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+      .svg-flow, .checklist {
+        page-break-inside: avoid;
+        background: #fff;
+        color: #000;
+        border: 1px solid #000;
+      }
+      a, a:visited {
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>The Leviathan Engine - Infrastructure Roadmap Checklist</h1>
+  <p>Use this checklist and flowchart to track your progress as you build out the infrastructure for The Leviathan Engine. Print this page to keep a physical record of your progress.</p>
+
+  <h2>Phase Checklist</h2>
+  <div class="checklist">
+    <h3>Phase 1: Core Development Infrastructure</h3>
+    <label><input type="checkbox"> Proxmox: Create Ubuntu 24.04 LTS cloud-init template</label>
+    <label><input type="checkbox"> Proxmox: Deploy GitLab VM from template</label>
+    <label><input type="checkbox"> Configure SSH keys and cloud-init access</label>
+    <label><input type="checkbox"> Install GitLab Community Edition (CE)</label>
+    <label><input type="checkbox"> Configure Postfix with Gmail SMTP relay</label>
+    <label><input type="checkbox"> Test email relay with <code>mailutils</code></label>
+    <label><input type="checkbox"> Set up GitHub public repo and mirror</label>
+    <label><input type="checkbox"> Docker Compose: Start local dev stack (Postgres, Redis, Prometheus, Grafana)</label>
+
+    <h3>Phase 2: Infrastructure as Code</h3>
+    <label><input type="checkbox"> Initialize Terraform for Proxmox</label>
+    <label><input type="checkbox"> Create reusable Terraform modules</label>
+    <label><input type="checkbox"> Configure Proxmox provider and variables</label>
+    <label><input type="checkbox"> Deploy VMs with Terraform</label>
+    <label><input type="checkbox"> Set up Ansible for configuration management</label>
+    <label><input type="checkbox"> Write Ansible roles for Go app, DB, monitoring</label>
+    <label><input type="checkbox"> Deploy Go app with Ansible</label>
+
+    <h3>Phase 3: Monitoring & Testing</h3>
+    <label><input type="checkbox"> Deploy Prometheus and Grafana</label>
+    <label><input type="checkbox"> Configure dashboards for engine metrics</label>
+    <label><input type="checkbox"> Integrate Proxmox/node monitoring</label>
+    <label><input type="checkbox"> Set up k6 load testing scripts</label>
+
+    <h3>Phase 4: CI/CD Pipeline</h3>
+    <label><input type="checkbox"> Configure GitLab CI/CD pipeline</label>
+    <label><input type="checkbox"> Add test, build, security, deploy, and load-test stages</label>
+    <label><input type="checkbox"> Enable automated mirroring to GitHub</label>
+
+    <h3>Phase 5: Development Workflow Tools</h3>
+    <label><input type="checkbox"> Write dev setup scripts (dev-setup.sh, Makefile)</label>
+    <label><input type="checkbox"> Document all steps in <code>INFRASTRUCTURE-ROADMAP.md</code></label>
+    <label><input type="checkbox"> Print and use this checklist for tracking</label>
+  </div>
+
+  <h2>Infrastructure Flowchart</h2>
+  <svg class="svg-flow" width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Phase 1 -->
+    <rect x="40" y="40" width="220" height="60" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+    <text x="150" y="75" text-anchor="middle" font-size="18" fill="#1976d2">Phase 1: Core Infra</text>
+    <rect x="80" y="120" width="140" height="40" rx="8" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
+    <text x="150" y="145" text-anchor="middle" font-size="14">Proxmox Template</text>
+    <rect x="80" y="170" width="140" height="40" rx="8" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
+    <text x="150" y="195" text-anchor="middle" font-size="14">GitLab VM</text>
+    <rect x="80" y="220" width="140" height="40" rx="8" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
+    <text x="150" y="245" text-anchor="middle" font-size="14">SSH/Cloud-Init</text>
+    <rect x="80" y="270" width="140" height="40" rx="8" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
+    <text x="150" y="295" text-anchor="middle" font-size="14">GitLab CE</text>
+    <rect x="80" y="320" width="140" height="40" rx="8" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
+    <text x="150" y="345" text-anchor="middle" font-size="14">Postfix/Gmail SMTP</text>
+    <rect x="80" y="370" width="140" height="40" rx="8" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
+    <text x="150" y="395" text-anchor="middle" font-size="14">Test Email</text>
+    <rect x="80" y="420" width="140" height="40" rx="8" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
+    <text x="150" y="445" text-anchor="middle" font-size="14">GitHub Mirror</text>
+    <rect x="80" y="470" width="140" height="40" rx="8" fill="#fff" stroke="#1976d2" stroke-width="1.5"/>
+    <text x="150" y="495" text-anchor="middle" font-size="14">Dev Stack (Docker)</text>
+    <!-- Phase 2 -->
+    <rect x="340" y="40" width="220" height="60" rx="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
+    <text x="450" y="75" text-anchor="middle" font-size="18" fill="#388e3c">Phase 2: IaC</text>
+    <rect x="380" y="120" width="140" height="40" rx="8" fill="#fff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="450" y="145" text-anchor="middle" font-size="14">Terraform Init</text>
+    <rect x="380" y="170" width="140" height="40" rx="8" fill="#fff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="450" y="195" text-anchor="middle" font-size="14">Terraform Modules</text>
+    <rect x="380" y="220" width="140" height="40" rx="8" fill="#fff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="450" y="245" text-anchor="middle" font-size="14">Proxmox Provider</text>
+    <rect x="380" y="270" width="140" height="40" rx="8" fill="#fff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="450" y="295" text-anchor="middle" font-size="14">Deploy VMs</text>
+    <rect x="380" y="320" width="140" height="40" rx="8" fill="#fff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="450" y="345" text-anchor="middle" font-size="14">Ansible Setup</text>
+    <rect x="380" y="370" width="140" height="40" rx="8" fill="#fff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="450" y="395" text-anchor="middle" font-size="14">Ansible Roles</text>
+    <rect x="380" y="420" width="140" height="40" rx="8" fill="#fff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="450" y="445" text-anchor="middle" font-size="14">Deploy Go App</text>
+    <!-- Phase 3 -->
+    <rect x="640" y="40" width="220" height="60" rx="10" fill="#fffde7" stroke="#fbc02d" stroke-width="2"/>
+    <text x="750" y="75" text-anchor="middle" font-size="18" fill="#fbc02d">Phase 3: Monitoring</text>
+    <rect x="680" y="120" width="140" height="40" rx="8" fill="#fff" stroke="#fbc02d" stroke-width="1.5"/>
+    <text x="750" y="145" text-anchor="middle" font-size="14">Prometheus/Grafana</text>
+    <rect x="680" y="170" width="140" height="40" rx="8" fill="#fff" stroke="#fbc02d" stroke-width="1.5"/>
+    <text x="750" y="195" text-anchor="middle" font-size="14">Dashboards</text>
+    <rect x="680" y="220" width="140" height="40" rx="8" fill="#fff" stroke="#fbc02d" stroke-width="1.5"/>
+    <text x="750" y="245" text-anchor="middle" font-size="14">Node Monitoring</text>
+    <rect x="680" y="270" width="140" height="40" rx="8" fill="#fff" stroke="#fbc02d" stroke-width="1.5"/>
+    <text x="750" y="295" text-anchor="middle" font-size="14">k6 Load Testing</text>
+    <!-- Phase 4 -->
+    <rect x="340" y="520" width="220" height="60" rx="10" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2"/>
+    <text x="450" y="555" text-anchor="middle" font-size="18" fill="#8e24aa">Phase 4: CI/CD</text>
+    <rect x="380" y="470" width="140" height="40" rx="8" fill="#fff" stroke="#8e24aa" stroke-width="1.5"/>
+    <text x="450" y="495" text-anchor="middle" font-size="14">GitLab CI/CD</text>
+    <rect x="380" y="420" width="140" height="40" rx="8" fill="#fff" stroke="#8e24aa" stroke-width="1.5"/>
+    <text x="450" y="445" text-anchor="middle" font-size="14">Pipeline Stages</text>
+    <rect x="380" y="370" width="140" height="40" rx="8" fill="#fff" stroke="#8e24aa" stroke-width="1.5"/>
+    <text x="450" y="395" text-anchor="middle" font-size="14">GitHub Mirror</text>
+    <!-- Phase 5 -->
+    <rect x="40" y="520" width="220" height="60" rx="10" fill="#e0f7fa" stroke="#00838f" stroke-width="2"/>
+    <text x="150" y="555" text-anchor="middle" font-size="18" fill="#00838f">Phase 5: Dev Tools</text>
+    <rect x="80" y="470" width="140" height="40" rx="8" fill="#fff" stroke="#00838f" stroke-width="1.5"/>
+    <text x="150" y="495" text-anchor="middle" font-size="14">Dev Scripts</text>
+    <rect x="80" y="420" width="140" height="40" rx="8" fill="#fff" stroke="#00838f" stroke-width="1.5"/>
+    <text x="150" y="445" text-anchor="middle" font-size="14">Documentation</text>
+    <rect x="80" y="370" width="140" height="40" rx="8" fill="#fff" stroke="#00838f" stroke-width="1.5"/>
+    <text x="150" y="395" text-anchor="middle" font-size="14">Checklist</text>
+    <!-- Arrows (simplified for clarity) -->
+    <g stroke="#888" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L10,5 L0,10 L2,5 Z" fill="#888" />
+        </marker>
+      </defs>
+      <!-- Phase 1 to Phase 2 -->
+      <path d="M260,70 Q300,80 340,70" />
+      <!-- Phase 2 to Phase 3 -->
+      <path d="M560,70 Q600,80 640,70" />
+      <!-- Phase 1 to Phase 5 -->
+      <path d="M150,100 Q60,300 150,520" />
+      <!-- Phase 2 to Phase 4 -->
+      <path d="M450,180 Q450,350 450,520" />
+      <!-- Phase 3 to Phase 4 -->
+      <path d="M750,300 Q600,400 450,520" />
+    </g>
+  </svg>
+
+  <p style="margin-top:2em;font-size:0.95em;color:#555;">Checklist and flowchart generated for <b>The Leviathan Engine</b> infrastructure roadmap. For details, see <code>references/INFRASTRUCTURE-ROADMAP.md</code>.</p>
+</body>
+</html>

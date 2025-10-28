@@ -87,6 +87,14 @@ func (pm *PlayerManager) AuthenticatePlayer(username, token string) (*PlayerSess
 ### Documentation Directory Structure
 Maintain this structure and update with every significant change:
 
+**Documentation Update Requirements:**
+Every documentation section (in markdown, HTML, or code comments) must include:
+1. An update notice stating instructions were accurate at the time of publishing and may change.
+2. A "For additional information, please see ..." section with official documentation links.
+3. Book recommendations for further learning, where relevant.
+
+Maintain this structure and update with every significant change:
+
 ```
 docs/
 ├── ARCHITECTURE.md          # High-level system design and data flow
@@ -428,14 +436,7 @@ Persistent player data (database storage)
 
 ### Documentation Generation
 When creating new features:
-1. Update relevant docs/ files immediately
-2. Add tutorial sections for complex features
-3. Generate or update SVG diagrams if architecture changes
-4. Update CHANGELOG.md with educational context
-5. Include performance benchmarks and expectations
-6. Document KPI metrics and success criteria
-7. Create automated test coverage reports
-8. Update monitoring dashboards and alerting thresholds
+9. Ensure every section includes an update notice, further reading links, and book recommendations as described above.
 
 ### Automated Testing Requirements
 Every feature must include:
