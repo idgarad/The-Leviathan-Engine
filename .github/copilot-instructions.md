@@ -1,3 +1,9 @@
+- Create a main index (Home) page for navigation.
+- Organize content into dedicated pages (e.g., Design Philosophy, Territory Generation, Ships and FTL, Tips & Tricks).
+- Use internal wiki links for cross-referencing.
+- Update the changelog in the wiki (e.g., Changelog.md or a dedicated Changelog page).
+- Archive or remove legacy markdown files from the repo once migrated.
++- Integrate visual diagrams (SVG or PNG) into documentation when appropriate. Always confirm with the user ("Should I prepare a diagram for ...?") before generating diagrams to avoid clutter.
 # The Leviathan Engine - AI Coding Agent Instructions
 
 ## Project Overview
@@ -93,36 +99,22 @@ Every documentation section (in markdown, HTML, or code comments) must include:
 2. A "For additional information, please see ..." section with official documentation links.
 3. Book recommendations for further learning, where relevant.
 
-Maintain this structure and update with every significant change:
 
-```
-docs/
-├── ARCHITECTURE.md          # High-level system design and data flow
-├── API.md                   # Protocol specification and examples
-├── DATABASE.md              # Schema design and persistence patterns  
-├── MODULES.md               # Plugin system architecture
-├── PERFORMANCE.md           # Benchmarking and optimization guidelines
-├── TESTING.md               # Comprehensive testing strategies and KPI tracking
-├── MONITORING.md            # Real-time metrics and dashboard configuration
-├── TUTORIALS.md             # Step-by-step implementation guides
-├── DATA_DICTIONARY.md       # Complete data structure reference
-├── diagrams/                # SVG infrastructure diagrams
-│   ├── system-overview.svg
-│   ├── data-flow.svg
-│   ├── grid-architecture.svg
-│   ├── protocol-flow.svg
-│   ├── performance-metrics.svg
-│   └── testing-pipeline.svg
-├── examples/                # Code examples for tutorials
-│   ├── basic-client/
-│   ├── simple-module/
-│   ├── custom-commands/
-│   └── performance-testing/
-└── reports/                 # Automated test and performance reports
-    ├── performance/         # Performance regression reports (HTML format)
-    ├── coverage/           # Code coverage analysis (HTML dashboards)
-    └── kpi/                # KPI tracking and trends (HTML reports)
-```
+## Wiki-Based Documentation Standard
+All documentation—including technical docs, lore, tutorials, tips/tricks, and the changelog—must be placed in the project wiki. This ensures a single source of truth, easy navigation, and cross-referencing.
+
+### Wiki Structure Guidelines
+- Create a main index (Home) page for navigation.
+- Organize content into dedicated pages (e.g., Design Philosophy, Territory Generation, Ships and FTL, Tips & Tricks).
+- Use internal wiki links for cross-referencing.
+- Update the changelog in the wiki (e.g., Changelog.md or a dedicated Changelog page).
+- Archive or remove legacy markdown files from the repo once migrated.
+
+### Documentation Update Requirements
+Every documentation section (in wiki format) must include:
+1. An update notice stating instructions were accurate at the time of publishing and may change.
+2. A "For additional information, please see ..." section with official documentation links.
+3. Book recommendations for further learning, where relevant.
 
 ### Human-Readable Changelog
 Update `CHANGELOG.md` with every commit using this format:

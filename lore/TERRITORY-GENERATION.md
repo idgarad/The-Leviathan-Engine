@@ -1,3 +1,13 @@
+## Survival Protocols & Damage Response
+- Ships do not eject escape pods; crew remain with disabled ships for safety and local gravity.
+- Distress beacons are activated by ship mainframes upon disablement, and all factions respect these signals per USO law.
+- Navigation and communication in wormhole space function as in normal space; wormhole gates are semi-organic structures stabilizing W-Space.
+- Players interact with factions, clans, and corporations via NPCs, contracts, and consequences of actions.
+- Reputation system tracks player actions and affects standing with groups.
+# Core Design Principle: There are no windows in space ships
+- All visual feedback is via sensor data, tactical overlays, or camera feeds (internal or drone-based).
+- No real-time graphics; all player views are abstracted, tactical, or sensor-driven.
+- USO (United Systems Organization) mandates double hull design for all spacecraft, making windows structurally impossible and tactically unsound.
 # Territory Generation Expectations
 
 > **NOTICE:** This document was accurate at the time of publishing (October 2025). Territory generation rules and structures may evolve as development progresses. Always refer to the latest version for updates.
