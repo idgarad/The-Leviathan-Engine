@@ -40,35 +40,33 @@ docker-compose up -d
 # Build and run the engine
 go mod tidy
 go build -o leviathan-engine cmd/server/main.go
-./leviathan-engine
-```
 
-## 📚 Documentation
+# The Leviathan Engine
 
-- **[Architecture Overview](docs/ARCHITECTURE.md)** - System design and data flow
-- **[API Reference](docs/API.md)** - Protocol specification and examples
-- **[Development Setup](docs/DEVELOPMENT.md)** - Local environment configuration
-- **[Tutorial Series](docs/TUTORIALS.md)** - Step-by-step implementation guides
-- **[Performance Guide](docs/PERFORMANCE.md)** - Optimization and benchmarking
+A scalable, text-based MUD/MMO engine written in Go, designed as both a functional engine and a comprehensive tutorial/reference for game engine development.
 
-## 🛠️ Technology Stack
+## Documentation
+All technical documentation, lore, tutorials, tips/tricks, and the changelog are now maintained in the project wiki. Please refer to the wiki for up-to-date information, infrastructure diagrams, and cross-referenced resources.
 
-- **Language**: Go 1.25.3+
-- **Database**: SQLite (dev) / PostgreSQL (production)
-- **Protocol**: JSON-lines over TCP
-- **Monitoring**: Prometheus + Grafana
-- **Infrastructure**: Proxmox cluster with Terraform/Ansible
+## Key Features
+- Scalable architecture for large-scale multiplayer
+- Modular plugin system
+- JSON-lines protocol for client communication
+- SQLite/PostgreSQL persistence
+- Real-time metrics and monitoring
+- Comprehensive testing and KPI tracking
+- Wiki-based documentation and visual diagrams
 
-## 🎮 Game Design Principles
+## Getting Started
+See the wiki for setup instructions, infrastructure reference, onboarding guides, and example test lab/home lab architectures.
 
-### Idgarad Conceptual Model (ICM)
-The engine implements a three-tier interaction framework:
+## Philosophy
+- "There are no windows in space ships" — all player views are sensor/tactical driven
+- Engine design prioritizes clarity, scalability, and educational value
+- Documentation is maintained in the wiki for consistency and ease of navigation
 
-1. **Tier 1 - Individual**: Personal progression and skill development
-2. **Tier 2 - Group**: Small team cooperation and shared objectives  
-3. **Tier 3 - Faction**: Large-scale political and economic systems
-
-### Dynamic Content Scaling
+## License
+See LICENSE for details.
 Content automatically adapts to participant numbers, maintaining challenge and providing appropriate rewards regardless of group size.
 
 ## 🔧 Development Workflow

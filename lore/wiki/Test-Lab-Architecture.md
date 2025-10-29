@@ -5,8 +5,14 @@
 ## Overview
 
 ## Topology
-- **Proxmox Cluster:** 2 nodes (PVE1, PVE2)
-- **Storage:** ZFS pool for VM storage; NFS, iSCSI, and SMB shares hosted on PVE1
+
+## VMs
+- **elz01:** Handles HAProxy and Nginx forwarding (reverse proxy, SSH/HTTPS routing)
+- **gitlab01:** Hosts the GitLab instance for code and CI/CD
+
+## Proxmox Cluster
+- 2 nodes (PVE1, PVE2)
+- ZFS pool for VM storage; NFS, iSCSI, and SMB shares hosted on PVE1
 
 ## Networks
 - **Green Network (192.168.1.0/24):** Standard home lab, internet access

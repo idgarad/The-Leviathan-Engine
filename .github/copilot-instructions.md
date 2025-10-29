@@ -1,3 +1,5 @@
+### Special Query Prefix
+If the user prefixes a question with '??', do not document the response in the wiki or project files—provide a direct answer only.
 - Create a main index (Home) page for navigation.
 - Organize content into dedicated pages (e.g., Design Philosophy, Territory Generation, Ships and FTL, Tips & Tricks).
 - Use internal wiki links for cross-referencing.
