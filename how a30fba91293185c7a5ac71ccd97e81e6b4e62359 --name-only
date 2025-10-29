@@ -1,0 +1,90 @@
+[33m163bd67a1bab3d8dc7cc01d20d5939a6fa9e7cdb[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Final Cleanup of Wiki Structure and Settings
+D	lore/LORE-ENGINE-CONSISTENCY-CHECKLIST.md
+D	lore/PRIMARY-NARRATIVE.md
+D	lore/TERRITORY-GENERATION.md
+D	lore/history/README.md
+D	lore/technology/SHIPS-AND-FTL.md
+[33mb5a70a4ca7290f246c91f091c18c1203c70e5b33[m Reorg of lore wiki
+A	lore/Home.md
+[33m452d8337d261aaff85ba3a1cd0533a828d93d78b[m Reminder of the benchmarking purpose.
+M	lore/wiki/Beginner-Guide-CI-CD.md
+[33mc0de0f43659edd39b0f430af32298b38a8a32fd1[m Make an index page for the wiki.
+M	lore/wiki/Home.md
+[33ma30fba91293185c7a5ac71ccd97e81e6b4e62359[m Addtional wiki updates.
+M	.github/copilot-instructions.md
+M	README.md
+A	lore/wiki/Beginner-Guide-CI-CD.md
+A	lore/wiki/Beginner-Guide-CI-CD.svg
+A	lore/wiki/Database-Backend-Selection.md
+A	lore/wiki/Design-Concerns.md
+A	lore/wiki/Docker-Tips.md
+M	lore/wiki/Test-Lab-Architecture.md
+[33m0863b117cd21984236e0770f91a0671ac3f46011[m Moved documentation into a wiki structure to reduce redundancy and improve navigation.
+M	.github/copilot-instructions.md
+A	lore/LORE-ENGINE-CONSISTENCY-CHECKLIST.md
+M	lore/TERRITORY-GENERATION.md
+A	lore/history/README.md
+A	lore/technology/SHIPS-AND-FTL.md
+A	lore/wiki/DNSMasq-DDWRT-Setup.md
+A	lore/wiki/Design-Philosophy.md
+A	lore/wiki/Home.md
+A	lore/wiki/Multi-Node-Docker.md
+A	lore/wiki/NGINX-SELF-SIGNED-SSL.md
+A	lore/wiki/Primary-Narrative.md
+A	lore/wiki/REVERSE-PROXY-SSH-HTTPS.md
+A	lore/wiki/SmartDNS-DDWRT-Setup.md
+A	lore/wiki/Territory-Generation.md
+A	lore/wiki/Test-Lab-Architecture.md
+A	lore/wiki/Tips-and-Tricks.md
+A	lore/wiki/UBUNTU-DHCP-HOSTNAME.md
+A	lore/wiki/UBUNTU-STATIC-IP-NETPLAN.md
+D	references/CODING-MILESTONES.html
+D	references/CODING-ROADMAP.md
+D	references/DEVELOPMENT-CHECKLIST.html
+D	references/INFRASTRUCTURE-CHECKLIST.html
+D	references/INFRASTRUCTURE-ROADMAP.md
+D	references/PLAYER-TUTORIAL-EXPECTATIONS.md
+D	references/POST-MORTEM.md
+D	references/THE-NEW-PLAYER-EXPERIENCE.md
+D	references/tips_tricks/MULTI-NODE-DOCKER.md
+D	references/tips_tricks/NGINX-SELF-SIGNED-SSL.md
+D	references/tips_tricks/REVERSE-PROXY-SSH-HTTPS.md
+[33m5f08c1c40f7c00856e2c65f8912804fece46fc9e[m Tweaked tips as we proceeded through the infrastracture setup.
+A	references/tips_tricks/NGINX-SELF-SIGNED-SSL.md
+M	references/tips_tricks/REVERSE-PROXY-SSH-HTTPS.md
+[33mda0583faf7573dedccb691d569c99b638b17fb02[m Purged minor tips. Added reverse proxy tip.
+A	references/tips_tricks/REVERSE-PROXY-SSH-HTTPS.md
+[33m2f73c26c3aac616237a5f1862040c396b1a7bd37[m Added Tips and Tricks in reference documents to document suggestions and snippets we come across during development.
+M	.github/copilot-instructions.md
+M	references/INFRASTRUCTURE-ROADMAP.md
+A	references/tips_tricks/MULTI-NODE-DOCKER.md
+[33m89066ddcd878557d10289ff31f69cb35b5cbcde3[m Added missing reference documents to repo.
+M	references/INFRASTRUCTURE-ROADMAP.md
+[33m3119c141293a2d3b126fd09f998893d3041243da[m Further lore enchancments and player tutorial expectations added.
+M	lore/TERRITORY-GENERATION.md
+M	references/PLAYER-TUTORIAL-EXPECTATIONS.md
+M	references/THE-NEW-PLAYER-EXPERIENCE.md
+[33meef1dc9edd6a11638c8a22e40f003fb1c3aea437[m Additional Documentation and Lore needed for guiding project.
+M	.github/copilot-instructions.md
+A	CONTRIBUTING.md
+A	README.md
+A	lore/PRIMARY-NARRATIVE.md
+A	lore/TERRITORY-GENERATION.md
+A	references/CODING-MILESTONES.html
+A	references/CODING-ROADMAP.md
+A	references/DEVELOPMENT-CHECKLIST.html
+A	references/INFRASTRUCTURE-CHECKLIST.html
+M	references/INFRASTRUCTURE-ROADMAP.md
+A	references/PLAYER-TUTORIAL-EXPECTATIONS.md
+D	references/ROADMAP.md
+A	references/THE-NEW-PLAYER-EXPERIENCE.md
+A	scripts/sync-to-github.sh
+[33md29594afde426fa6981f41789d55c7b5ad92e742[m Made sure the AI reminds me to take breaks.
+M	.github/copilot-instructions.md
+[33m3c5dbc46693bbe1f1caeb0b1f26515c4246c1312[m Added Infrastructure Roadmap for Pre-coding Phase
+A	references/INFRASTRUCTURE-ROADMAP.md
+[33m7095926ca2e3b0121a248468e0d9f2871b9e5a75[m Initial Foundational Documentation
+A	.github/copilot-instructions.md
+A	references/POST-MORTEM.md
+A	references/ROADMAP.md
+[33m5f073dd0a14299064a249da0821ded47934563b2[m Initial commit to set up the project structure and add necessary files.
