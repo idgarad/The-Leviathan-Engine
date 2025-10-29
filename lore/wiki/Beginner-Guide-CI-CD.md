@@ -8,6 +8,19 @@ This guide explains how CI/CD (Continuous Integration/Continuous Deployment) wor
 
 ---
 
+## Benchmarking & Performance Testing
+The Leviathan Engine is not just a game engine—it also serves as a benchmarking tool for infrastructure. You can use it to compare database backends (e.g., SQLite vs. PostgreSQL), system performance, and resource utilization across different environments (VMs, containers, bare metal).
+
+**Full performance tests** generate detailed reports for in-depth analysis, including:
+- Database query latency and throughput
+- System resource usage (CPU, memory, disk I/O)
+- Network performance
+- Comparative analysis of different backends and configurations
+
+These reports help you optimize your infrastructure and make informed decisions about scaling, reliability, and cost.
+
+---
+
 ## CI/CD Pipeline: How the Tools Work Together
 
 ### 1. **Source Control: GitHub & GitLab**
