@@ -1,5 +1,5 @@
 ### Special Query Prefix
-If the user prefixes a question with '??', do not document the response in the wiki or project files—provide a direct answer only.
+If the user prefixes a question with '??', or if the query comes through voice chat, do not document the response in the wiki or project files—provide a direct answer only. Only generate documentation if the user explicitly requests it.
 - Create a main index (Home) page for navigation.
 - Organize content into dedicated pages (e.g., Design Philosophy, Territory Generation, Ships and FTL, Tips & Tricks).
 - Use internal wiki links for cross-referencing.
@@ -40,7 +40,7 @@ This is especially important during intensive coding sessions or complex problem
 ### Primary Language: Go
 - **Main Engine**: Go 1.25.3+ for all core components
 - **Target Platform**: Linux servers (primary), Windows development
-- **Database**: SQLite for development, PostgreSQL for production scaling
+- **Database**: SQLite for development, PostgreSQL for production scaling, both tested during development using sqlite as a fallback.
 - **Protocol**: JSON-lines over TCP for client communication
 - **Build Tool**: Standard Go tooling (`go mod`, `go build`)
 
