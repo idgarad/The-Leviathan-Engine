@@ -1,3 +1,104 @@
-# 06. GitLab CI/CD Pipeline Guide
+# GitLab CI/CD Pipeline Guide
 
-...existing content from cicd-pipeline.md...
+> **Update Notice:** Accurate as of October 2025. For latest info, see official GitLab documentation.
+> 
+> **For additional information, please see:**
+> - GitLab CI/CD Docs: https://docs.gitlab.com/ee/ci/
+> - [Book] "Continuous Delivery" by Jez Humble & David Farley
+
+---
+
+## Phase 1: Define Pipeline Stages
+
+- Example stages:
+  ```yaml
+  stages:
+    - test
+    - build
+    - security
+    - deploy-dev
+    - load-test
+    - deploy-staging
+  ```
+
+---
+
+## Phase 2: Example .gitlab-ci.yml
+
+```yaml
+variables:
+  GO_VERSION: "1.25"
+  POSTGRES_DB: leviathan_test
+  POSTGRES_USER: test
+  POSTGRES_PASSWORD: test
+
+test:
+  stage: test
+  image: golang:${GO_VERSION}
+  services:
+    - postgres:15
+  script:
+    - go mod download
+    - go test -v -coverprofile=coverage.out ./...
+    - go tool cover -html=coverage.out -o coverage.html
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+    paths:
+      - coverage.html
+  coverage: '/coverage: \d+\.\d+% of statements/'
+
+build:
+  stage: build
+  image: golang:${GO_VERSION}
+  script:
+    - CGO_ENABLED=0 GOOS=linux go build -o leviathan-engine ./cmd/server
+  artifacts:
+    paths:
+      - leviathan-engine
+
+security_scan:
+  stage: security
+  image: securecodewarrior/docker-gosec
+  script:
+    - gosec ./...
+  allow_failure: true
+
+deploy_dev:
+  stage: deploy-dev
+  image: alpine:latest
+  before_script:
+    - apk add --no-cache ansible
+  script:
+    - cd infrastructure/ansible
+    - ansible-playbook -i inventories/development playbooks/deploy-engine.yml
+  environment:
+    name: development
+    url: http://dev.leviathan.local
+
+load_test:
+  stage: load-test
+  image: loadimpact/k6:latest
+  script:
+    - k6 run --out json=load-test-results.json scripts/load-test.js
+  artifacts:
+    reports:
+      performance: load-test-results.json
+```
+
+---
+
+## Troubleshooting & Best Practices
+- Use `gitlab-ctl restart` after pipeline config changes.
+- Monitor pipeline status in GitLab UI.
+- Document all pipeline stages and jobs.
+
+---
+
+> **Update Notice:** Instructions accurate as of October 2025. For latest info, see official docs.
+> 
+> **Further Reading:**
+> - https://docs.gitlab.com/ee/ci/
+> - "Continuous Delivery" by Jez Humble & David Farley
