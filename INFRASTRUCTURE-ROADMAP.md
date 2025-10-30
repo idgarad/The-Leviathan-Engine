@@ -941,3 +941,61 @@ This infrastructure will give you:
 - **Modern CI/CD** practices with comprehensive testing
 
 The order prioritizes getting a working development environment quickly, then building out the infrastructure automation that will support your scaling tests and production deployments.
+
+---
+
+## Setting Up Nginx SSL Proxy for GitLab (arcadis.hopto.org)
+
+> **Update Notice:** Accurate as of October 2025. For latest security practices, always consult official Nginx and GitLab documentation.
+
+### Step-by-Step Instructions
+
+1. **Copy SSL Certificate and Key to elz01**
+   - On your GitLab server, locate your SSL certificate and private key (commonly in `/etc/gitlab/ssl/`).
+   - Securely copy both files to your Nginx server (`elz01`), e.g.:
+     ```bash
+     scp /etc/gitlab/ssl/arcadis.hopto.org.crt elz01:/etc/nginx/ssl/arcadis.hopto.org.crt
+     scp /etc/gitlab/ssl/arcadis.hopto.org.key elz01:/etc/nginx/ssl/arcadis.hopto.org.key
+     ```
+   - Ensure permissions are secure (readable by Nginx, not world-readable).
+
+2. **Configure Nginx for SSL Termination and Proxy**
+   - On `elz01`, edit or create your Nginx site config (e.g., `/etc/nginx/sites-available/gitlab`):
+     ```nginx
+     server {
+         listen 443 ssl;
+         server_name arcadis.hopto.org;
+
+         ssl_certificate     /etc/nginx/ssl/arcadis.hopto.org.crt;
+         ssl_certificate_key /etc/nginx/ssl/arcadis.hopto.org.key;
+
+         location / {
+             proxy_pass         http://gitlab01:80;
+             proxy_set_header   Host $host;
+             proxy_set_header   X-Real-IP $remote_addr;
+             proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+             proxy_set_header   X-Forwarded-Proto $scheme;
+         }
+     }
+     ```
+   - If your internal GitLab is running HTTPS, change `proxy_pass` to `https://gitlab01:443;` and add `proxy_ssl_verify off;` if using self-signed certs.
+
+3. **Enable the Site and Reload Nginx**
+   - Link your config:
+     ```bash
+     ln -s /etc/nginx/sites-available/gitlab /etc/nginx/sites-enabled/
+     nginx -t  # Test config
+     systemctl reload nginx
+     ```
+
+4. **Update DNS**
+   - Ensure `arcadis.hopto.org` points to your `elz01` public IP.
+
+5. **Test Access**
+   - Visit `https://arcadis.hopto.org` in your browser. You should see your GitLab login page.
+   - Check SSL certificate details to confirm correct domain.
+
+> For additional information, see:
+> - Nginx SSL Docs: https://nginx.org/en/docs/http/configuring_https_servers.html
+> - GitLab Reverse Proxy: https://docs.gitlab.com/ee/administration/reverse_proxy.html
+> - [Book] "NGINX Cookbook" by Tim Butler
