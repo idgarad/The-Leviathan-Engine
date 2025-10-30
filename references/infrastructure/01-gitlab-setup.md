@@ -1,0 +1,3 @@
+# 01. GitLab Setup Guide
+
+...existing content from gitlab-setup.md...

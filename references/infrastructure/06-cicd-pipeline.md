@@ -1,0 +1,3 @@
+# 06. GitLab CI/CD Pipeline Guide
+
+...existing content from cicd-pipeline.md...

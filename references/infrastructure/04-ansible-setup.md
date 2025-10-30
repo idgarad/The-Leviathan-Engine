@@ -1,0 +1,3 @@
+# 04. Ansible Setup Guide
+
+...existing content from ansible-setup.md...

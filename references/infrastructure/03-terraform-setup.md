@@ -1,0 +1,3 @@
+# 03. Terraform Setup Guide
+
+...existing content from terraform-setup.md...
