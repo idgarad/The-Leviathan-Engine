@@ -1,3 +1,8 @@
+# Developer Journal Standard
+Every project must include a `Developer Journal.md` for recording developer notes and journal entries.
+- Journal entries should be dated (YYYY-MM-DD, no timestamp), and numbered sequentially for each day.
+- All entries must be signed as "Idgarad Lyracant via VsCode and GitHub Copilot".
+- When the user requests a journal entry, add it to the journal file following these rules.
 ### Special Query Prefix
 If the user prefixes a question with '??', or if the query comes through voice chat, do not document the response in the wiki or project files—provide a direct answer only. Only generate documentation if the user explicitly requests it.
 - Create a main index (Home) page for navigation.
@@ -7,6 +12,35 @@ If the user prefixes a question with '??', or if the query comes through voice c
 - Archive or remove legacy markdown files from the repo once migrated.
 +- Integrate visual diagrams (SVG or PNG) into documentation when appropriate. Always confirm with the user ("Should I prepare a diagram for ...?") before generating diagrams to avoid clutter.
 # The Leviathan Engine - AI Coding Agent Instructions
+# Writing Style Guidance (Idgarad)
+
+## Personal Writing Style Notes
+The developer (Idgarad) prefers a writing style that is:
+- Conversational and reflective, often sharing personal experiences and context
+- Detailed, with clear explanations and rationale for decisions
+- Structured, using numbered lists, bullet points, and section headers for clarity
+- Educational, aiming to teach and provide learning opportunities for readers
+- Honest and direct, including both successes and challenges
+- Signed journal entries and documentation for accountability
+- Uses analogies and metaphors to clarify concepts (e.g., "MMOs are like a peach")
+- Integrates practical advice and real-world context
+- Favors clarity and readability over brevity or excessive technical jargon
+
+## Copilot Documentation and Journal Entry Standards
+- When generating documentation, journal entries, or comments, match the above style: be clear, conversational, and educational.
+- Annotate entries with relevant files/changes when appropriate.
+- Use numbered and bulleted lists to organize information.
+- Include personal reflections and context when summarizing progress or decisions.
+- Always sign journal entries as "Idgarad Lyracant via VsCode and GitHub Copilot" and date them (YYYY-MM-DD).
+- Maintain a tone that is approachable and informative, suitable for both technical and non-technical readers.
+
+## Example Journal Entry Style
+2025-10-30 Entry 1
+Today is going well as we make progress on infrastructure development. GitLab and Docker are already up and running, and we will be moving on to Terraform soon. I am continuing to develop documentation with the AI to ensure a sensible structure and flow for building out this project.
+
+I have experimented with using Copilot's voice chat to reduce typing. It is mildly effective.
+
+...existing content...
 
 ## Project Overview
 

@@ -1,3 +1,9 @@
+# Resource Reminder
+For additional learning, see:
+- [Book Recommendations](../resources/Book%20Recommendations.md)
+- [Video Recommendations](../resources/Video%20Recommendations.md)
+- [Online Coursework](../resources/Online%20Coursework.md)
+
 # GitLab CI/CD Pipeline Guide
 
 > **Update Notice:** Accurate as of October 2025. For latest info, see official GitLab documentation.
