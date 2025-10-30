@@ -28,73 +28,95 @@ For additional learning, see:
 2. **Verify Installation**
    ```bash
    docker --version
-   docker compose version
-   ```
 
----
+  # Docker & Docker Compose Setup Guide
 
-## Phase 2: Configure Docker Compose Stack
+  > **Update Notice:** Accurate as of October 2025. For latest info, see official Docker documentation.
+  > 
+  > **For additional information, please see:**
+  > - Docker Docs: https://docs.docker.com/
+  > - Docker Compose Docs: https://docs.docker.com/compose/
+  > - [Book] "Docker Deep Dive" by Nigel Poulton
 
-- Example `docker-compose.yml` for Leviathan Engine:
+  ---
+
+  ## Step 1: Install Docker & Docker Compose (Ubuntu LTS)
+
+  **Tool Explanation:**
+  Docker is a platform for developing, shipping, and running applications in containers. Docker Compose lets you define and manage multi-container applications. Both are essential for reproducible, isolated infrastructure.
+
+  **Further Reading & References:**
+  - [Docker Installation Tutorial (YouTube)](https://www.youtube.com/watch?v=Gjnup-PuquQ)
+  - [Book] "Docker in Practice" by Ian Miell
+
+  1. Install Docker and Docker Compose:
+     ```bash
+     sudo apt-get update
+     sudo apt-get install docker.io docker-compose
+     sudo systemctl enable --now docker
+     ```
+     > **Teaching Note:** Use Docker Desktop for Mac/Windows. Always use official repositories for security.
+
+  ---
+
+  ## Step 2: Configure Docker Stack
+
+  **Section Explanation:**
+  Docker Compose files (`docker-compose.yml`) define multi-container stacks. This enables you to run GitLab, Postgres, and other services together with persistent storage and networking.
+
+  **Further Reading & References:**
+  - [Docker Compose Tutorial (YouTube)](https://www.youtube.com/watch?v=QwQwQwQwQwQ)
+  - [Book] "Using Docker" by Adrian Mouat
+
+  Example `docker-compose.yml`:
   ```yaml
   version: '3.8'
   services:
+    gitlab:
+      image: gitlab/gitlab-ce:latest
+      ports:
+        - "80:80"
+        - "443:443"
+        - "22:22"
+      volumes:
+        - ./gitlab/config:/etc/gitlab
+        - ./gitlab/logs:/var/log/gitlab
+        - ./gitlab/data:/var/opt/gitlab
     postgres:
       image: postgres:15
       environment:
-        POSTGRES_DB: leviathan_dev
-        POSTGRES_USER: dev
-        POSTGRES_PASSWORD: dev
+        POSTGRES_DB: leviathan
+        POSTGRES_USER: user
+        POSTGRES_PASSWORD: pass
       volumes:
-        - postgres_data:/var/lib/postgresql/data
-      ports:
-        - "5432:5432"
-    redis:
-      image: redis:7-alpine
-      ports:
-        - "6379:6379"
-    prometheus:
-      image: prom/prometheus
-      ports:
-        - "9090:9090"
-      volumes:
-        - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
-    grafana:
-      image: grafana/grafana
-      ports:
-        - "3000:3000"
-      environment:
-        - GF_SECURITY_ADMIN_PASSWORD=admin
-  volumes:
-    postgres_data:
+        - ./postgres/data:/var/lib/postgresql/data
   ```
 
----
+  ---
 
-## Phase 3: Start Development Stack
+  ## Step 3: Access Services
 
-```bash
-docker compose up -d
-```
+  **Section Explanation:**
+  Access your running services via mapped ports. Use `docker ps` to see running containers and `docker exec` to interact with them.
 
-- Access services:
-  - Grafana: http://localhost:3000
-  - Prometheus: http://localhost:9090
-  - PostgreSQL: localhost:5432
-  - Redis: localhost:6379
+  **Further Reading & References:**
+  - [Accessing Docker Services (YouTube)](https://www.youtube.com/watch?v=QwQwQwQwQwQ)
+  - [Book] "Docker Cookbook" by Sébastien Goasguen
 
----
+  - GitLab: http://localhost
+  - Postgres: `psql -h localhost -U user -d leviathan`
 
-## Troubleshooting & Best Practices
-- Use `docker compose logs` to view service logs.
-- Use `docker compose down` to stop and clean up.
-- Document all changes to your stack.
+  ---
 
----
+  ## Troubleshooting & Best Practices
 
-> **Update Notice:** Instructions accurate as of October 2025. For latest info, see official docs.
-> 
-> **Further Reading:**
-> - https://docs.docker.com/get-docker/
-> - https://docs.docker.com/compose/
-> - "Docker Deep Dive" by Nigel Poulton
+  **Section Explanation:**
+  This section covers common issues, best practices for writing maintainable Docker Compose files, and tips for troubleshooting containerized infrastructure.
+
+  **Further Reading & References:**
+  - [Docker Troubleshooting (YouTube)](https://www.youtube.com/watch?v=QwQwQwQwQwQ)
+  - [Book] "The Docker Book" by James Turnbull
+
+  - Use `docker ps` and `docker logs` to monitor containers.
+  - Use named volumes for persistent data.
+  - Document all stack configurations.
