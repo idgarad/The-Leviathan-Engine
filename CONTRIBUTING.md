@@ -1,4 +1,5 @@
 # Contributing to The Leviathan Engine
+> **Language Notice:** As of October 2025, Rust is the unified backend language for all simulation, orchestration, and infrastructure code in The Leviathan Engine project. All future code examples and integrations will use Rust.
 
 Thank you for your interest in contributing to The Leviathan Engine! This project operates with a dual-repository approach that balances development efficiency with community collaboration.
 
@@ -103,11 +104,6 @@ go run cmd/server/main.go
 - Follow standard Go conventions (`gofmt`, `golint`, `go vet`)
 - Use meaningful variable and function names
 - Include comprehensive comments for complex logic
-- Prioritize readability and educational value
-
-## 🎮 Game Design Contributions
-
-### ICM Framework Compliance
 All gameplay features must consider the three-tier interaction model:
 
 **Tier 1 - Individual Content**
@@ -134,15 +130,12 @@ All gameplay features must consider the three-tier interaction model:
 ## 🔍 Review Process
 
 ### Community Review
-1. **Public Discussion**: All changes discussed openly on GitHub
-2. **Code Visibility**: Complete diffs available for community inspection
-3. **Educational Review**: Ensure contributions enhance learning value
+
+## Coding Standards
+
+- Rust for backend and infrastructure
 4. **Performance Impact**: Assess implications for scalability targets
 
-### Integration Timeline
-1. **GitHub PR**: Community review and discussion
-2. **GitLab Integration**: Approved changes merged to primary development
-3. **CI/CD Pipeline**: Automated testing and validation
 4. **GitHub Sync**: Changes mirrored back to public repository
 
 ## 🏆 Recognition

@@ -1,10 +1,12 @@
 # The Leviathan Engine
 
+> **Language Notice:** As of October 2025, Rust is the unified backend language for all simulation, orchestration, and infrastructure code in The Leviathan Engine project. All future code examples and integrations will use Rust.
+
 [![GitLab CI](https://gitlab.local/idgarad/leviathan-engine/badges/main/pipeline.svg)](https://gitlab.local/idgarad/leviathan-engine/-/pipelines)
-[![Go Version](https://img.shields.io/badge/go-1.25.3%2B-blue.svg)](https://golang.org)
+[![Rust Version](https://img.shields.io/badge/rust-1.70%2B-orange.svg)](https://www.rust-lang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A scalable, text-based MUD/MMO engine written in Go, designed as both a functional game engine and comprehensive educational reference for game development.
+A scalable, text-based MUD/MMO engine written in Rust, designed as both a functional game engine and comprehensive educational reference for game development.
 
 ## 🏗️ Development Infrastructure
 
@@ -38,12 +40,9 @@ cd The-Leviathan-Engine
 docker-compose up -d
 
 # Build and run the engine
-go mod tidy
-go build -o leviathan-engine cmd/server/main.go
-
-# The Leviathan Engine
-
-A scalable, text-based MUD/MMO engine written in Go, designed as both a functional engine and a comprehensive tutorial/reference for game engine development.
+cargo build --release
+./target/release/leviathan-engine
+```
 
 ## Documentation
 All technical documentation, lore, tutorials, tips/tricks, and the changelog are now maintained in the project wiki. Please refer to the wiki for up-to-date information, infrastructure diagrams, and cross-referenced resources.

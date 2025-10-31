@@ -1,5 +1,8 @@
 
+
 # Project Roadmap
+
+> **Language Notice:** As of October 2025, Rust is the unified backend language for all simulation, orchestration, and infrastructure code in The Leviathan Engine project. All future code examples and integrations will use Rust.
 
 This roadmap outlines the major phases for building and evolving The Leviathan Engine. Each section includes objectives and key deliverables to guide development and infrastructure work.
 

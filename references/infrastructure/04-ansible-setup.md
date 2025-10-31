@@ -6,7 +6,10 @@ For additional learning, see:
 
 infrastructure/ansible/
 
+
 # Ansible Setup Guide
+
+> **Language Notice:** As of October 2025, Rust is the unified backend language for all simulation, orchestration, and infrastructure code in The Leviathan Engine project. All future code examples and integrations will use Rust.
 
 > **Update Notice:** Accurate as of October 2025. For latest info, see official Ansible documentation.
 > 
