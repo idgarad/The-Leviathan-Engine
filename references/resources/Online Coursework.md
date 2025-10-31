@@ -38,5 +38,15 @@ Published open-access courses for infrastructure, DevOps, cloud, and software en
 - [AWS Cloud Practitioner Essentials (AWS Training)](https://www.aws.training/Details/Curriculum?id=20685)
 	- Core cloud concepts and AWS fundamentals.
 
+## 9. Rust Programming Language (Read: Rust Books in Suggested Order)
+- [Rust Track on Exercism](https://exercism.org/tracks/rust)
+	- Recommended after reading "The Rust Programming Language" and "Rust by Example". Practice problems for beginners.
+- [Rustlings Interactive Course](https://github.com/rust-lang/rustlings)
+	- Complements "The Rust Programming Language" and "Rust by Example". Interactive exercises for hands-on learning.
+- [Rust by Example](https://doc.rust-lang.org/rust-by-example/)
+	- Can be used alongside the book for practical examples.
+- [Zero To Production in Rust](https://www.zero2prod.com/)
+	- Recommended after "Programming Rust", "Rust in Action", and "Rust for Rustaceans". Focuses on building real-world web services in Rust.
+
 ---
 _Update notice: Recommendations accurate as of 2025-10-30. For additional information, see course provider sites._

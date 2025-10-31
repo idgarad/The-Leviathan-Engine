@@ -15,6 +15,11 @@ This document aggregates recommended books for infrastructure, DevOps, cloud, an
    - Principles for designing maintainable software systems.
 6. **Designing Data-Intensive Applications** by Martin Kleppmann
    - Deep dive into modern data systems and scalability.
+7. **The Rust Programming Language** by Steve Klabnik and Carol Nichols (aka "The Rust Book") — Beginner, official introduction
+8. **Rust by Example** (online, but printable) — Practical, hands-on examples for beginners
+9. **Programming Rust** by Jim Blandy, Jason Orendorff, and Leonora F. S. Tindall — Intermediate, deeper language concepts
+10. **Rust in Action** by Tim McNamara — Intermediate, real-world projects and systems
+11. **Rust for Rustaceans** by Jon Gjengset — Advanced, for experienced Rust developers
 
 ## Additional Recommendations
 - **Continuous Delivery** by Jez Humble, David Farley
