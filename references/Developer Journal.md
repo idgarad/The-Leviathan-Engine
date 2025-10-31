@@ -1,4 +1,9 @@
+2025-10-30 Entry 2
+Today we are researching and evaluating the appropriate licensing requirements for The Leviathan Engine project. The goal is to ensure the engine is freely available for educational purposes and unrestricted for non-commercial individual use, while limiting commercial exploitation. We are considering GNU or GPL licensing as a possible solution, but will review all options to best balance openness and protection. This is an important step to support the project's educational mission and community accessibility.
 
+Signed: Idgarad Lyracant via VsCode and GitHub Copilot
+
+---
 
 2025-10-30 Entry 1
 Today is going well as we make progress on infrastructure development. GitLab and Docker are already up and running, and we will be moving on to Terraform soon. I am continuing to develop documentation with the AI to ensure a sensible structure and flow for building out this project.
