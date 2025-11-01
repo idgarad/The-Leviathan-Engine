@@ -140,42 +140,41 @@ resource "proxmox_vm_qemu" "leviathan_test" {
 ## Step 6: Team Workflows & GitLab CE Integration
 
 **Section Explanation:**
-When using GitLab Community Edition (CE), you don't have access to GitLab's built-in Terraform state management. Instead, use a remote backend (like NFS, MinIO, or Consul) and run Terraform via GitLab CI/CD or a dedicated management VM. This section covers best practices for collaborative workflows and homelab-friendly state management.
-
+When using GitLab Community Edition (CE), you don't have access to GitLab's built-in Terraform state management. Instead, use a remote backend (like NFS, Ceph RADOS Gateway, or Consul) and run Terraform via GitLab CI/CD or a dedicated management VM. This section covers best practices for collaborative workflows and homelab-friendly state management.
 
 **Remote State Management Options:**
-- **MinIO (Recommended):** Deploy MinIO as described in [Step 02.1 - MinIO Setup Guide](./02.1-minio-setup.md). Use the `s3` backend in Terraform, pointing to your MinIO instance. This provides S3-compatible, reliable, and scalable state storage for homelab and team use.
+- **Ceph RADOS Gateway (Recommended):** Deploy Ceph with RADOS Gateway (RGW) for S3-compatible, reliable, and scalable state storage. RGW provides true fault tolerance and multi-node scalability. See the [Ceph RGW Setup Guide](./ceph-rgw-setup.md) for step-by-step instructions.
 - **NFS Share:** Host a secure NFS share on your homelab NAS or a dedicated VM. Configure Terraform to use the NFS path for `terraform.tfstate`. Ensure only trusted users have access.
 - **Consul:** Run a Consul server (can be a lightweight VM or container) for state storage and locking. Good for advanced users.
 - **Git Versioning (not recommended for teams):** As a last resort, you can version the state file in a private Git repo, but this is risky for concurrent use and not recommended for teams.
 
-> **Integration Note:** For most homelabs, MinIO (see [Step 02.1 - MinIO Setup Guide](./02.1-minio-setup.md)) is the recommended backend for Terraform state. Configure your `backend` block in Terraform as follows:
+> **Integration Note:** For most homelabs, Ceph RGW is the recommended backend for Terraform state. For security, create a dedicated RGW user and password for Terraform access. Configure your `backend` block in Terraform as follows:
 > ```hcl
 > terraform {
 >   backend "s3" {
->     endpoint   = "http://<minio-ip>:9000"
+>     endpoint   = "http://<ceph-rgw-ip>:7480"
 >     bucket     = "terraform-state"
 >     key        = "global/terraform.tfstate"
 >     region     = "us-east-1"
->     access_key = "minioadmin"
->     secret_key = "yoursecurepassword"
+>     access_key = "terraform-user"
+>     secret_key = "your-terraform-password"
 >     skip_credentials_validation = true
 >     skip_metadata_api_check     = true
 >     force_path_style           = true
 >   }
 > }
 > ```
-> Adjust endpoint, bucket, and credentials as needed for your MinIO setup.
+> Adjust endpoint, bucket, and credentials as needed for your Ceph RGW setup. Create the dedicated user using `radosgw-admin` and assign only the permissions needed for Terraform state access.
 
 **Homelab Recommendations:**
 - Use a small, always-on VM or a Raspberry Pi as a management node for running Terraform and storing state (if not using a NAS).
 - For NFS: Use TrueNAS, OpenMediaVault, or a simple Ubuntu server with NFS exports.
-- For MinIO: Deploy on a VM or Docker container; provides a web UI and S3 API.
+- For Ceph RGW: Deploy on a VM or physical nodes; provides a web UI and S3 API.
 - Ensure regular backups of your state files, regardless of backend.
 
 **Team Workflow Best Practices:**
 1. Store all Terraform code in your GitLab CE repository.
-2. Configure all team members to use the same remote backend (NFS, MinIO, or Consul).
+2. Configure all team members to use the same remote backend (NFS, Ceph RGW, or Consul).
 3. Use GitLab CI/CD pipelines to run `terraform plan` and `terraform apply` (see below for example job).
 4. Only one person or pipeline should run `terraform apply` at a time. Use state locking if possible.
 5. Use merge requests for all changes; review and test with `terraform plan` before applying.
@@ -194,7 +193,9 @@ terraform:
 ```
 
 **Further Reading & References:**
-- [MinIO Docs](https://min.io/docs/minio/linux/index.html)
+- [Ceph RGW Docs](https://docs.ceph.com/en/latest/radosgw/)
+- [Ceph S3 Quick Start (YouTube)](https://www.youtube.com/results?search_query=ceph+s3+setup)
+- [Book] "Learning Ceph" by Anthony D’Atri
 - [Consul by HashiCorp](https://www.consul.io/docs)
 - [Homelab NFS Setup (YouTube)](https://www.youtube.com/watch?v=QwQwQwQwQwQ)
 - [Book] "Infrastructure as Code" by Kief Morris
