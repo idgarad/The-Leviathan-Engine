@@ -48,6 +48,25 @@ See `/Docs/References/` for the complete resource library.
 
 ---
 
+## 🚗 Sidecar Projects vs Engine Integration
+
+### **Sidecar Projects** (Phase 0-1, Early Phase 2)
+Small, focused projects created **outside** The Leviathan Engine repository for learning fundamental concepts:
+- Examples: `hello-leviathan/`, `rust-calculator/`, `faction-generator/`, `ship-validator/`
+- **Purpose**: Clean learning environment without main project complexity
+- **Benefits**: Easy to experiment, make mistakes, and understand concepts in isolation
+
+### **Engine Integration** (Later Phase 2-3)  
+Components developed **within** The Leviathan Engine project structure:
+- Examples: Message bus, grid manager, persistence layer, admin tools
+- **Purpose**: Learn real-world project organization and component integration
+- **Benefits**: Build toward actual engine architecture, understand system connections
+
+### **Transition Strategy**
+Tutorials guide progression from sidecar concept exploration to engine integration, often prototyping in sidecars before implementing in the main engine.
+
+---
+
 ## 🛡️ Scope Management
 
 ### Current Sprint Focus
