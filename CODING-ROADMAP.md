@@ -1,56 +1,187 @@
-# The Leviathan Engine - Coding Roadmap (Rust Edition)
+# The Leviathan Engine - Coding Roadmap (Zero to Hero Rust Edition)
 
 > **NOTICE:** Instructions were accurate at time of publishing (November 2025). Verify tooling versions and APIs before implementation.
 
-This roadmap closes out preplanning and establishes a fine-grained, lore-aligned build sequence. Sprints are grouped into week-long sub-sprints (A/B) to reinforce iterative learning, with explicit ties to the codex library, Copilot notes, and architectural guardrails (message bus first, crate boundaries, validation layers, admin ACLs).
+This roadmap provides a comprehensive learning journey from complete programming beginner to advanced Rust game engine developer. The focus is **education through practical tool building** rather than feature completion. Each sprint teaches specific Rust concepts while creating useful administrative tools for the eventual game engine.
+
+**🎓 Educational Philosophy**: Learn Rust by building a toolkit of interconnected utilities that solve real problems. Tools are built incrementally, can be used independently, and connect via message bus architecture.
+
+**📚 Tutorial Integration**: Each sprint has detailed tutorials in `/Docs/Tutorials/` with learning objectives, scope boundaries, and comprehensive resource lists.
+
+**🚫 Scope Management**: Aggressive scope control to prevent feature creep. "Good enough to learn the concept" is the success criteria.
 
 ---
 
-## Sprint 0A (Week 1): Codex Intake & Standards Baseline
-**Documents:** All codices, `lore/README.md`, main `README.md`, Copilot Notes
+## 🎯 Learning Pathway Overview
 
-- Catalog glossary terms, enums, and canonical identifiers into `docs/DATA_DICTIONARY.md`
-- Capture doctrine constraints (ICM, Sacred Rule, NPC sovereignty) in `docs/DEVELOPMENT_GUARDRAILS.md`
-- Scaffold Cargo workspace with crates: `domain`, `protocol`, `world`, `infrastructure`, `client-admin`, `telemetry`
-- Configure formatting (rustfmt), linting (clippy), pre-commit hooks, and doc generation pipeline (rustdoc + mdBook/wiki sync)
-- Establish message bus abstraction crate skeleton per Copilot guidance (async channels, trait-based publishers/subscribers)
+### Phase 0: Developer Renaissance (Weeks 1-2)
+**Goal**: Reestablish programming mindset and modern development practices for experienced developers new to Rust
 
-Deliverables: repo layout, data dictionary seed, guardrail doc, CI formatting checks, baseline message bus traits.
+### Phase 1: Config & Data Tools (Months 1-3)  
+**Goal**: Master Rust fundamentals through practical administrative utilities
 
-## Sprint 0B (Week 2): Toolchain, Test Harness & Snapshot Strategy
-**Documents:** Psychology of Play, Operator, Copilot Notes
+### Phase 2: Simulation & Analysis Tools (Months 4-6)
+**Goal**: Build complex systems with async programming and performance awareness  
 
-- Implement integration test harness crate (`tests/harness`) with ability to spawn subsystems via message bus mocks
-- Define snapshot/rollback plan referencing lore (Imperial Archives) and codify in `docs/RESILIENCE_PLAN.md`
-- Wire telemetry hooks (tracing) with no-op sink to ensure instrumentation consistency
-- Prototype load-test harness stub (10k dummy actors) per Copilot Notes to validate message bus design
+### Phase 3: Real-Time & Distributed Systems (Months 7-9)
+**Goal**: Create networked, concurrent systems for live game management
 
-Deliverables: test harness crate, resilience plan, tracing instrumentation, load-test scaffold.
+**📖 Complete Tutorial Documentation**: See `/Docs/Tutorials/README.md` for full learning pathway and progress tracking.
 
 ---
 
-## Sprint 1A (Week 3): Operator Contracts & Shares Domain
-**Documents:** Operator Codex, Sovereignty & Territory
+## Phase 0: Developer Renaissance
 
-- Model core structs (Operator, Clan, House, Array, Contract, Share, Dividend, TribunalCase) with Serde derives
-- Implement contract lifecycle FSM (open → pledged → active → cooling → renegotiation) matching codex timelines
-- Encode share/dividend rules (Imperial guarantees, sequestration for fines) with time-based accrual engine
-- Provide seed fixtures representing campaign auctions and sue-for-peace events
+### Sprint 0A (Week 1): Environment Setup & Mental Models
+**Tutorial**: `/Docs/Tutorials/Phase-0-Developer-Renaissance/Sprint-0A-Environment-Setup.md`
+**Learning Focus**: Development Environment & Rust Mindset Transition  
+**Scope**: Environment setup, basic Rust concepts, "Hello World" level programs
+**Target Audience**: Complete beginners or experienced developers new to Rust
 
-Deliverables: `domain` crate alpha, unit tests for contract/share engines, fixture pack.
+- Install and configure complete Rust development environment (rustup, VS Code, extensions)
+- Understand key mental model differences from pre-OOP programming to Rust
+- Create first Rust project with proper structure and basic concepts
+- Learn modern development tool integration (Git, formatting, linting)
+- Complete foundational exercises to establish comfort with Rust syntax
 
-## Sprint 1B (Week 4): Governance Validation & Audit Logging
-**Documents:** Sovereignty & Territory, Psychology of Play & Safeguarding
+**Success Criteria**: Can create new Rust projects, understand basic ownership concepts, development environment fully functional
 
-- Build validation layer enforcing NPC sovereignty (no direct player ownership), Sacred Rule compliance, contract caps
-- Introduce structured audit logging (Imperial Oversight) with message bus events for infra subscribers
-- Author developer-facing lore notes explaining guardrail violations and responses (e.g., forced sue-for-peace)
+**Scope Boundaries**: No complex algorithms, web development, or networking - pure environment and syntax focus
 
-Deliverables: validation module, audit log publisher, documentation of enforcement flows.
+### Sprint 0B (Week 2): Modern Development Practices & Git Workflows
+**Tutorial**: `/Docs/Tutorials/Phase-0-Developer-Renaissance/Sprint-0B-Modern-Practices.md`  
+**Learning Focus**: Testing mindset, Git workflows, documentation culture, debugging skills  
+**Project**: Build a calculator with comprehensive testing
+
+- Establish testing-first mindset with unit tests and documentation
+- Learn modern Git workflows for solo development (branching, commits, collaboration preparation)
+- Practice error handling patterns with Result types and pattern matching
+- Develop debugging skills using Rust tools and techniques
+- Create first "real" program that solves a practical problem with professional code quality
+
+**Success Criteria**: Calculator works correctly, comprehensive test coverage, clean Git history, comfortable with Rust error handling
+
+**Scope Boundaries**: No CI/CD pipelines, external dependencies, or performance optimization - focus on fundamentals
 
 ---
 
-## Sprint 2A (Week 5): Command Node Protocol & ACL Foundation
+## Phase 1: Config & Data Tools (Months 1-3)
+
+### Sprint 1A (Week 3): Faction Config Generator
+**Tutorial**: `/Docs/Tutorials/Phase-1-Config-Data-Tools/Sprint-1A-Faction-Generator.md`
+**Learning Focus**: Structs, Enums, File I/O, Serialization, CLI Arguments  
+**Project**: CLI tool to generate faction configuration files for game administration
+
+- Master struct design for modeling real-world data with proper organization
+- Learn enum usage for type-safe categorization and exhaustive pattern matching  
+- Understand serialization concepts with Serde and TOML configuration files
+- Build command-line interfaces using clap for argument parsing and validation
+- Practice file operations: reading, writing, and validating configuration data
+
+**Success Criteria**: Tool generates valid TOML faction configs from command-line arguments, comprehensive validation, professional CLI interface
+
+**Scope Boundaries**: No database storage, web interfaces, or complex validation rules - focus on core Rust data modeling
+
+### Sprint 1B (Week 4): Ship Design Validator  
+**Tutorial**: `/Docs/Tutorials/Phase-1-Config-Data-Tools/Sprint-1B-Ship-Validator.md`  
+**Learning Focus**: Advanced Error Handling, Pattern Matching, Validation Logic, Custom Error Types  
+**Project**: CLI tool to validate ship configuration files against design rules
+
+- Create custom error types using thiserror for meaningful, actionable error messages
+- Master advanced pattern matching with complex match expressions and exhaustive coverage
+- Build comprehensive validation logic for complex data structures and business rules
+- Learn file processing patterns: batch processing, directory traversal, and reporting
+- Practice professional error reporting with context and user-friendly messages
+
+**Success Criteria**: Validates ship configs with detailed error reports, handles edge cases gracefully, batch processing capabilities
+
+**Scope Boundaries**: No GUI interfaces, network validation, or performance optimization - focus on error handling mastery
+
+### Sprint 2A (Week 5): NPC Behavior Simulator
+**Tutorial**: `/Docs/Tutorials/Phase-1-Config-Data-Tools/Sprint-2A-NPC-Simulator.md` *(To be detailed)*  
+**Learning Focus**: Collections, Iterators, Algorithms, Basic Data Analysis  
+**Project**: CLI tool to simulate NPC behavior patterns without full game engine
+
+- Master Rust collections (Vec, HashMap, BTreeMap) and when to use each
+- Learn iterator patterns and functional programming concepts in Rust
+- Understand algorithm complexity and performance considerations for data processing
+- Build simulation loops and basic statistical analysis of results
+- Practice data visualization and reporting for administrative tools
+
+**Success Criteria**: Simulates configurable NPC populations with behavioral analysis and reporting
+
+### Sprint 2B (Week 6): Database Schema Migrator  
+**Tutorial**: `/Docs/Tutorials/Phase-1-Config-Data-Tools/Sprint-2B-Database-Migrator.md` *(To be detailed)*  
+**Learning Focus**: Traits, Generics, Database Integration, Migration Patterns  
+**Project**: CLI tool to manage PostgreSQL schema changes for game data
+
+- Understand trait system for code reuse and abstraction
+- Learn generics for type-safe, reusable code patterns
+- Integrate with external databases using sqlx and connection management
+- Build migration systems with version control and rollback capabilities
+- Practice modular code organization across multiple crates
+
+**Success Criteria**: Manages database schema versions with safe migrations and rollbacks
+
+---
+
+## Phase 2 & 3: Advanced Systems *(Detailed tutorials to be created as Phase 1 completes)*
+
+### Sprint 3A+: Economic Simulator, Performance Profiler, Template Engine, Test Harness
+**Focus**: Async programming, benchmarking, macros, integration testing
+
+### Sprint 4A+: Message Bus, Grid Manager, Real-Time Dashboard  
+**Focus**: Network programming, concurrent systems, web frameworks
+
+### Sprint 5A+: Advanced Systems Integration
+**Focus**: Plugin architectures, monitoring, production deployment
+
+---
+
+## 📚 Learning Resource Updates
+
+The following reference materials will be updated to align with tutorial progression:
+
+### Books Integration  
+- `/Docs/References/Book Recommendations.md` - Updated with ISBN numbers and specific chapter mappings to sprints
+- Academic paper citations added to relevant tutorial sections
+- Online course recommendations mapped to learning objectives
+
+### Video Recommendations
+- `/Docs/References/Video Recommendations.md` - Curated content aligned with each sprint's learning objectives  
+- Grouped by Rust concept and skill level progression
+
+### Academic Integration
+- `/Docs/References/Academic.md` - Computer science papers supporting design decisions and learning approaches
+- Links to publicly available research on game engine architecture, configuration management, and systems programming
+
+---
+
+## 🎯 Next Steps for Tutorial Development
+
+As we complete each sprint, the following tutorials will be detailed:
+
+**Priority 1** (Next 2 sprints to detail):
+- Sprint 2A: NPC Behavior Simulator tutorial with collections and algorithms focus
+- Sprint 2B: Database Schema Migrator tutorial with traits and generics mastery
+
+**Priority 2** (Phase 2 preparation):
+- Economic Simulator async programming foundation
+- Performance Profiler benchmarking and optimization techniques
+
+**Priority 3** (Advanced systems):
+- Message Bus architecture and network programming
+- Real-time systems and concurrent data structures
+
+Each tutorial will include:
+- Comprehensive resource lists with ISBNs and academic citations
+- Clear scope boundaries and time management guidelines  
+- Step-by-step code examples with educational context
+- Common pitfall warnings and scope creep prevention
+
+---
+
+## Sprint 3A (Week 7): [LEGACY - TO BE RESTRUCTURED]
 **Documents:** Bridge Operations, Combat, Copilot Notes
 
 - Implement JSON-lines command envelope with signature, payload, metadata, officer chatter channels
