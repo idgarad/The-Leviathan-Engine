@@ -52,35 +52,59 @@
 - **Real-Time Dashboard** - Web frameworks, WebSockets, live data
 - **Complete Game Engine** - All systems integrated and operational
 
-## �️ **Learning Approach**
+## 🛠️ **Learning Approach**
+
+### **Client Requirements Methodology**
+The **[Codex Library](Docs/Codex/README.md)** serves as your **client requirements specification** - detailed technical and design documents that define exactly what needs to be built. This teaches essential professional skills:
+- **Requirements Analysis**: Understanding complex, interconnected system specifications  
+- **Technical Translation**: Converting business/design requirements into code architecture
+- **Scope Management**: Building incrementally toward comprehensive system goals
+- **Client Communication**: Learning to work from formal specification documents
 
 ### **Sidecar Projects + Engine Integration**
 - **Sidecar Projects**: Small external projects for learning concepts (Phases 0-1)
-- **Engine Integration**: Build components within the main project (Phases 2-3)
-- **Progressive Complexity**: Each sprint builds on previous knowledge
-- **Practical Focus**: Every tool solves real administrative problems
+- **Engine Integration**: Build components within the main project (Phases 2-3)  
+- **Progressive Complexity**: Each sprint builds on previous knowledge while working toward Codex requirements
+- **Practical Focus**: Every tool solves real administrative problems defined in the specifications
 
 ### **Educational Philosophy**
-- **Zero Assumptions**: Complete beginner-friendly explanations
-- **Hands-On Learning**: Build working tools, not toy examples  
+- **Zero Assumptions**: Complete beginner-friendly explanations with professional context
+- **Requirements-Driven**: Learn to build what the client actually needs, not what seems interesting
+- **Hands-On Learning**: Build working tools that meet real specifications, not toy examples
 - **Professional Practices**: Testing, documentation, and version control from day one
-- **Scope Management**: "Good enough to learn the concept" prevents feature creep
+- **Scope Management**: "Good enough to meet requirements" prevents feature creep
 - **Resource Rich**: Books (with ISBNs), academic papers, videos, and online courses
 
 ## 🎮 **The Game: Space-Based Political Simulation**
 
-### **Core Concept**
-A text-based MMO where players are **Wardens** (ship commanders) serving **NPC Houses** in territorial expansion campaigns. Players never own territory directly - they earn **shares** and **influence** through contracts and military service.
+### **Vision: "Game of Thrones in Space"**
+A fusion of **Dwarf Fortress** depth, **Eve Online** political complexity, and **Europa Universalis** grand strategy mechanics. The Leviathan Engine creates a living political simulation where players are **Wardens** (ship commanders) serving **NPC Houses** in territorial expansion campaigns.
 
-### **Key Systems** *(What You'll Build)*
-- **Bridge Operations**: Multi-device command interfaces for capital ships
-- **Economic Simulation**: Complex supply chains and manufacturing 
-- **Political Intrigue**: House rivalries, espionage, and territorial control
-- **Combat Systems**: Fleet battles with detailed damage modeling
-- **Persistent Campaigns**: Seasonal content with long-term consequences
+**"There are no windows in space"** - The interface philosophy emphasizes **radar displays, tactical terminals, and sensor data** rather than 3D space views. This is about **commanding a ship**, not flying a fighter jet - you give orders and receive reports through professional interfaces that someone at NASA would appreciate.
+
+### **Core Concept**
+Players never own territory directly - they earn **shares** and **influence** through contracts and military service in an ever-evolving political landscape. The game world remains engaging **even with zero players** - a dramatic ant farm of NPC political maneuvering, economic cycles, and territorial shifts.
+
+### **Key Systems** *(What You'll Build - The Complete Specification)*
+- **Bridge Operations**: Multi-device command interfaces with crew management and XO autonomy
+- **Combat Systems**: Layered damage (deflector/shields/armor/hull), targeting mathematics, and electronic warfare
+- **FTL Travel**: Intrinsic Field mechanics with spin-up, cooldown, heat accumulation, and interdiction
+- **Economic Simulation**: Regional markets, order books, taxation layers, and supply chain complexity
+- **Political Systems**: NPC-driven grand strategy with administrative impulses and faction management
+- **Manufacturing**: Planetary facility construction (Factorio-style) with contract obligations and skimming opportunities
+- **Cargo & Storage**: Calculated Storage system with containerization and capacity politics
+- **Skill & Certification**: Complex progression trees with post-mastery bonuses and fleet-wide effects
+- **Language System**: Dynamic naming with grammar templates and translation capabilities
+- **Campaign Structure**: Seasonal territorial expansion with shares, dividends, and legacy persistence
+- **Safeguarding Systems**: NPC sovereignty enforcement and Sacred Rule compliance
 
 ### **Design Philosophy**
+- **Autonomous World**: Engaging simulation even at zero players - NPCs drive all major systems
+- **Authentic Spacefaring**: "No windows in space" - radar, terminals, and sensor interfaces over 3D graphics
+- **NASA-Grade Interfaces**: Functional, information-dense displays that prioritize data over eye candy
+- **Universal Accessibility**: Voice command integration and screen reader support - playable via Alexa or similar devices
 - **NPC Sovereignty**: Players are contractors, not rulers (prevents toxic power dynamics)
+- **Deep Systems**: Inspired by the complexity and emergence of the greatest strategy games
 - **Modular Architecture**: Unix-style tools connected via message bus
 - **Educational Value**: Every system teaches programming and game design concepts
 
