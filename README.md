@@ -1,134 +1,142 @@
 # The Leviathan Engine
 
-> **Language Notice:** As of October 2025, Rust is the unified backend language for all simulation, orchestration, and infrastructure code in The Leviathan Engine project. All future code examples and integrations will use Rust.
+> **Zero to Hero Rust Development Tutorial Project**  
+> **Learn Rust by Building a Complete Game Engine from Scratch**
 
-[![GitLab CI](https://gitlab.local/idgarad/leviathan-engine/badges/main/pipeline.svg)](https://gitlab.local/idgarad/leviathan-engine/-/pipelines)
 [![Rust Version](https://img.shields.io/badge/rust-1.70%2B-orange.svg)](https://www.rust-lang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Tutorial Progress](https://img.shields.io/badge/tutorial-active_development-blue.svg)](#tutorial-progress)
 
-A scalable, text-based MUD/MMO engine written in Rust, designed as both a functional game engine and comprehensive educational reference for game development.
+**The Leviathan Engine** is both a scalable text-based MUD/MMO engine and a comprehensive **Rust learning journey**. This project takes complete programming beginners through advanced systems programming concepts by building real, useful tools that eventually integrate into a complete game engine.
 
-## 🏗️ Development Infrastructure
+## 🎓 **Educational Mission**
 
-**Primary Development**: GitLab (Self-hosted)
-- Full CI/CD pipeline and automation
-- Private development workflows
-- Infrastructure as Code management
+**Target Audience**: Complete programming beginners OR experienced developers new to Rust  
+**Learning Philosophy**: Master Rust by building practical administrative tools and game systems  
+**Outcome**: Go from zero programming knowledge to building sophisticated distributed systems in ~1 year
 
-**Public Repository**: GitHub (This repository)  
-- Community access and code review
-- Issue tracking and discussions
-- Documentation and tutorials
+## 🚀 **Quick Start for Learners**
 
-## 🎯 Project Philosophy
+### **Ready to Learn Rust?**
+1. **Start Here**: [`Docs/Tutorials/README.md`](Docs/Tutorials/README.md) - Complete learning pathway
+2. **First Sprint**: [`Sprint 0A: Environment Setup`](Docs/Tutorials/Phase-0-Developer-Renaissance/Sprint-0A-Environment-Setup.md)
+3. **Track Progress**: Use the tutorial navigation and progress checklist
 
-The Leviathan Engine builds upon lessons learned from the BlackCitadel project, focusing on:
+### **Want to See the Vision?**
+- **Game Design**: [`Docs/Codex/README.md`](Docs/Codex/README.md) - Complete game system documentation
+- **Architecture**: [`CODING-ROADMAP.md`](CODING-ROADMAP.md) - Technical learning progression
+- **Philosophy**: [`Docs/References/`](Docs/References/) - Educational approach and resources
 
-- **Educational Value**: Every implementation serves as a learning example
-- **Terminal Excellence**: Inspired by BTOP, BPYTOP, and tmux for clean interfaces
-- **Comprehensive Testing**: Extensive performance monitoring and regression testing
-- **ICM Framework**: Three-tier content design (Individual/Group/Faction gameplay)
+## 🎯 **What You'll Build & Learn**
 
-## 🚀 Quick Start
+### **Phase 0: Developer Renaissance** *(Weeks 1-2)*
+- **Rust Environment Setup** - Modern development toolchain
+- **Basic Calculator** - Fundamental syntax, testing, and Git workflows
+- **Learning Focus**: Development habits and Rust mental models
 
-```bash
-# Clone the repository
-git clone https://github.com/idgarad/The-Leviathan-Engine.git
-cd The-Leviathan-Engine
+### **Phase 1: Administrative Toolkit** *(Months 1-3)*
+- **Faction Config Generator** - Structs, enums, serialization, CLI tools
+- **Ship Design Validator** - Advanced error handling, pattern matching, validation
+- **NPC Behavior Simulator** - Collections, iterators, algorithms
+- **Database Schema Migrator** - Traits, generics, database integration
 
-# Start local development environment
-docker-compose up -d
+### **Phase 2: Simulation Systems** *(Months 4-6)*
+- **Economic Simulator** - Async programming, concurrent processing
+- **Performance Profiler** - Benchmarking, optimization techniques  
+- **Config Template Engine** - Macros, code generation
+- **Integration Test Harness** - System testing, automation
 
-# Build and run the engine
-cargo build --release
-./target/release/leviathan-engine
-```
+### **Phase 3: Real-Time Engine** *(Months 7-9)*
+- **Message Bus Foundation** - Network programming, distributed systems
+- **Grid Manager Service** - Concurrent data structures, spatial systems
+- **Real-Time Dashboard** - Web frameworks, WebSockets, live data
+- **Complete Game Engine** - All systems integrated and operational
 
-## Documentation
+## �️ **Learning Approach**
 
-## 📖 Lore & Codex Reference
+### **Sidecar Projects + Engine Integration**
+- **Sidecar Projects**: Small external projects for learning concepts (Phases 0-1)
+- **Engine Integration**: Build components within the main project (Phases 2-3)
+- **Progressive Complexity**: Each sprint builds on previous knowledge
+- **Practical Focus**: Every tool solves real administrative problems
 
-The Leviathan Engine features a comprehensive set of codex documents in the `lore/` directory, each serving as a canonical reference for a major gameplay, lore, or technical system. These codices are designed to:
+### **Educational Philosophy**
+- **Zero Assumptions**: Complete beginner-friendly explanations
+- **Hands-On Learning**: Build working tools, not toy examples  
+- **Professional Practices**: Testing, documentation, and version control from day one
+- **Scope Management**: "Good enough to learn the concept" prevents feature creep
+- **Resource Rich**: Books (with ISBNs), academic papers, videos, and online courses
 
-- Provide authoritative lore and narrative context for all game systems
-- Document technical models, mechanics, and progression frameworks
-- Serve as educational resources for engine design and MMO development
+## 🎮 **The Game: Space-Based Political Simulation**
 
-### Codex Index (see `lore/README.md` for details)
+### **Core Concept**
+A text-based MMO where players are **Wardens** (ship commanders) serving **NPC Houses** in territorial expansion campaigns. Players never own territory directly - they earn **shares** and **influence** through contracts and military service.
 
-- **Bridge Operations Codex**: Officer roles, department definitions, crew scaling, XO autonomy, technical models, and lore justification for distributed command
-- **Certification Codex**: Skill suites, mastery, certifications, enhancement bonuses, meta-certification trees, XP curves, and fleet-wide performance mechanics
-- **Combat Codex**: Tank layers, targeting, EW, officer buffs, skills/certs, rules of engagement, critical strikes, and performance engineering
-- **Crafting & Manufacturing Codex**: Automated industry, ATEC system, player-driven manufacturing, tax layers, bootstrapping, and campaign persistence
-- **FTL Codex**: Intrinsic Field mechanics, instant jumps, mathematical models, ship examples, coding references, and frame-of-reference clarification
-- **Operator Codex**: Historical origins, campaign framework, power dynamics, seasonal gameplay, and narrative hooks
-- **Psychology of Play & Safeguarding Codex**: MMO philosophy, NPC sovereignty, rules of engagement, ICM, and player well-being
-- **Player Skills Codex**: Skill progression, post-mastery bonuses, suite certifications, and coding examples
-- **Sovereignty & Territory Codex**: Imperial ownership, campaign structure, sector/territory mechanics, shares/dividends, persistence, and legacy metadata
-- **NPC Interaction Codex**: (Placeholder for future NPC interaction systems and lore)
+### **Key Systems** *(What You'll Build)*
+- **Bridge Operations**: Multi-device command interfaces for capital ships
+- **Economic Simulation**: Complex supply chains and manufacturing 
+- **Political Intrigue**: House rivalries, espionage, and territorial control
+- **Combat Systems**: Fleet battles with detailed damage modeling
+- **Persistent Campaigns**: Seasonal content with long-term consequences
 
-Refer to `lore/README.md` for a full index and navigation guide. Each codex is cross-referenced in documentation and gameplay systems, and is updated as new systems are added or refined.
+### **Design Philosophy**
+- **NPC Sovereignty**: Players are contractors, not rulers (prevents toxic power dynamics)
+- **Modular Architecture**: Unix-style tools connected via message bus
+- **Educational Value**: Every system teaches programming and game design concepts
 
-All technical documentation, lore, tutorials, tips/tricks, and the changelog are maintained in the project wiki. Please refer to the wiki for up-to-date information, infrastructure diagrams, and cross-referenced resources.
+## � **Complete Documentation**
 
-## Key Features
-- Scalable architecture for large-scale multiplayer
-- Modular plugin system
-- JSON-lines protocol for client communication
-- SQLite/PostgreSQL persistence
-- Real-time metrics and monitoring
-- Comprehensive testing and KPI tracking
-- Wiki-based documentation and visual diagrams
+### **Learning Materials**
+- **[Tutorial Navigation](Docs/Tutorials/README.md)** - Complete learning pathway with progress tracking
+- **[Coding Roadmap](CODING-ROADMAP.md)** - Technical progression and sprint details  
+- **[Scope Management](Docs/Tutorials/Meta/Scope-Management.md)** - Avoiding feature creep and staying focused
 
-## Getting Started
-See the wiki for setup instructions, infrastructure reference, onboarding guides, and example test lab/home lab architectures.
+### **Game Design Reference**
+- **[Codex Library](Docs/Codex/README.md)** - Complete game system documentation
+- **[Lore & Worldbuilding](Docs/Lore/)** - Narrative context and setting information
+- **[References](Docs/References/)** - Books, papers, courses, and learning resources
 
-## Philosophy
-- "There are no windows in space ships" — all player views are sensor/tactical driven
-- Engine design prioritizes clarity, scalability, and educational value
-- Documentation is maintained in the wiki for consistency and ease of navigation
+### **Development Resources**
+- **[Book Recommendations](Docs/References/Book%20Recommendations.md)** - Curated reading list with ISBNs
+- **[Video Learning](Docs/References/Video%20Recommendations.md)** - Educational video content
+- **[Academic Papers](Docs/References/Academic.md)** - Research supporting design decisions
 
-## License
-See LICENSE for details.
-Content automatically adapts to participant numbers, maintaining challenge and providing appropriate rewards regardless of group size.
+## 🏆 **Tutorial Progress**
 
-## 🔧 Development Workflow
+| Phase | Status | Focus | Time Estimate |
+|-------|--------|-------|---------------|
+| **Phase 0** | 📝 Ready | Environment & Fundamentals | 2 weeks |
+| **Phase 1** | 📝 Outlined | Config & Data Tools | 3 months |
+| **Phase 2** | 📋 Planned | Simulation Systems | 3 months |  
+| **Phase 3** | 📋 Planned | Real-Time Engine | 3 months |
 
-1. **GitLab**: Primary development with full CI/CD pipeline
-2. **GitHub**: Public mirror for community access (this repository)
-3. **Proxmox**: Infrastructure testing and deployment automation
-4. **Monitoring**: Real-time performance tracking and alerting
+**Current Sprint**: Ready to begin [Sprint 0A: Environment Setup](Docs/Tutorials/Phase-0-Developer-Renaissance/Sprint-0A-Environment-Setup.md)
 
-## 📈 Performance & Quality
+## 🤝 **Community & Contributing**
 
-- **Target**: <50ms response time for local commands
-- **Scalability**: 1000+ concurrent players per server
-- **Testing**: 90%+ code coverage with automated regression detection
-- **Monitoring**: BTOP-inspired real-time metrics and dashboards
+### **For Learners**
+- **Follow Along**: Use the tutorials to learn Rust alongside the primary developer
+- **Share Experience**: Document your learning journey and challenges
+- **Improve Tutorials**: Suggest clarifications and additional examples
 
-## 🤝 Contributing
+### **For Experienced Developers**  
+- **Review & Feedback**: Help improve tutorial content and code examples
+- **Resource Contributions**: Suggest books, papers, and learning materials
+- **Architecture Discussion**: Contribute to game design and system architecture
 
-While primary development occurs on our GitLab instance, we welcome community contributions:
+### **Getting Involved**
+1. **Start Learning**: Begin with [Tutorial Navigation](Docs/Tutorials/README.md)
+2. **Join Discussions**: Share your progress and challenges in Issues
+3. **Contribute**: Help improve documentation and learning resources
 
-1. **Issues**: Report bugs and suggest features here on GitHub
-2. **Discussions**: Join conversations about game design and architecture
-3. **Documentation**: Help improve tutorials and examples
-4. **Code Review**: All code changes are visible here for community review
+## 📄 **License**
 
-For development contributions, please see our [Contributing Guide](CONTRIBUTING.md).
+MIT License - See [LICENSE](LICENSE) file for details.
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🏆 Project Status
-
-**Current Phase**: Infrastructure Setup
-- ✅ Project documentation and AI guidelines
-- ✅ Infrastructure roadmap and automation planning  
-- 🚧 GitLab deployment and CI/CD configuration
-- ⏳ Core engine development (upcoming)
+This project is designed to be freely used for education, with the hope that it helps others learn Rust and game engine development.
 
 ---
 
-**Built with ❤️ for the MUD development community**
+**🎓 Learn Rust • 🎮 Build Games • 🚀 Master Systems Programming**
+
+*The Leviathan Engine: Where education meets engineering excellence*
