@@ -1,5 +1,18 @@
+2025-11-06 Entry 1
+After a lot of dead ends we create another repo to track the infrastructure called "Homelab as Code" to help organize the homelab that we are using. The repo now lets us bootstrap the existing homelab from spare laptop and a usb stick to install the initial proxmox. Once that is up, it's all scripts. So we've been using the infrastructure guides in this project to help build that. So we are now done up to 03 - Terraform. Docker is up, well get K8s up and running. We will be explictly segregating Docks vs K8s in Docker for services and K8s for elastic instanced workloads. Getting that tiny hurdle of S3 storage just for the sake of Terraform is a bit comical but we now have 8-16TB of S3 style storage. I wager we'll use up a fair chunk of that when I move the gutenberg mirror into it. Speaking of which I should get that code written up. Regardless we are almost done with the back end of all this. Ansible and then I can get to the fun part (and what I am actually trained for) is metrics and statistical analysis of integrated environments. Fun. Once I can settle back into some Grafana and dashboarding I'll be considerable more relaxed and in my element. Then it will be CI/CD time and coding.
+
+I might do a bit more work on the codex format. I really want to honor the old supplimental guides and source books from TTRPG. I want the Codex to be reasonablly enteraining to read as well as function as the bridge between a lore-specific docoment and a design doc. It's there to be a justification for the features that need to be present.
+
+One thing I have found however is in maintaining the documentaion in the other project, track your docker ports you have assigned.
+Signed: Idgarad Lyracant via VsCode and GitHub Copilot
+
+---
+
 2025-11-01 Entry 1
 After a fair bit of testing, Consul is just too much overkill really for the dev environment, the justification just isn't there from a managment load despite what nomad brings. It just wasn't something I felt was worth the time or the effort for a predominatly educational tool. Garage I think is the more direct solution for this project since the only real use of it I see is terraform. Perhaps using it for config data as a repo for run-time configs might squeeze some additional use from it but to be honest I'd be hard pressed to think that as neccesary. My estimates are about 4 gigs worth of config data but I have to get the engine to a point where we can start testing the NPC memory subsystem to start looking at how the data will scale. With a 22 hour day and using just 500 concurrent users, I came up with nearly 50mb of memory data, per day, per NPC faction. Just 200 factions makes that a huge amount but it wouldn't require and sophisticate storage, it could be just ZFS with block level dedup and even that would be overkill. A simulated memory file that was 10 gbs compressed down to less than 100 mb as a gzip so it's highly compressable data already.I am honestly more worried about IO constraints processing the nightly update batch. I still have to contend with the time scale also.
+Signed: Idgarad Lyracant via VsCode and GitHub Copilot
+
+---
 
 2025-10-31 Entry 1
 
