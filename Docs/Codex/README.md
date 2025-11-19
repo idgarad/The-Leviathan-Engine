@@ -14,6 +14,7 @@ This README provides an overview and navigation guide for all codex files in the
 - **Crafting and Manufacturing Codex.md**: Crafting & Manufacturing Codex — Automated factory loops, ATEC manifests, taxation layers, bootstrapping, and cross-campaign persistence.
 - **FTL Codex.md**: FTL Codex — Intrinsic Field mechanics, tunable equations, interdiction handling, ship exemplars, and language-agnostic code samples.
 - **Grand Strategy Codex.md**: Grand Strategy NPC Decision Codex — Administrative impulses, NPC authority schema, planning managers, vacancy utilities, and impulse handling APIs.
+- **Time & Simulation Codex.md**: Time & Simulation Codex — Temporal semantics, ISD temporal accelerators, tuning defaults, APIs, and governor upgrade paths.
 - **Language Codex.md**: Linguistic Codex — Grammar templates, translation tables, phoneme flavoring, profanity safeguards, and prototype naming engines.
 - **Market Managment Codex.md**: Market Management Codex — Regional ledgers, order book mechanics, escrow/underwriting, reputation pledges, and espionage surfaces.
 - **NPC Ineteraction Codex.md**: NPC Interaction Codex — Pool/lore/active lifecycle, promotion triggers, vacancy fill ratios, and espionage integration hooks.

@@ -7,9 +7,9 @@ Here’s a **formalized Planetary Facilities Codex** that captures the Factorio�
 ---
 
 ## 1. Foundational Premise
-- **Pre‑Colonial Era:** Planets are not yet inhabited by colonists. Instead, they host **AI‑driven nanite and robotic facilities** preparing infrastructure.  
-- **Player Role:** You act as both a **developer** (fulfilling contracts for factions/Imperial oversight) and a **shadow warden** (skimming resources for personal or factional advantage).  
-- **Gameplay Loop:** Factorio‑style production chains + SimCity‑style infrastructure planning, with tension between **compliance** and **exploitation**.  
+- **Pre‑Colonial Era:** Planets are not yet actively colonized by people. Instead, the Imperial Survey & Development (ISD) and automated systems build the foundational infrastructure — factories, orbital constructors, energy grids, and specialized **temporal accelerators** — that prepare planets to receive colonists in the future.
+- **Player Role:** You act as both a **developer** (fulfilling contracts for factions/Imperial oversight) and a **shadow warden** (skimming resources for personal or factional advantage). Your work increases the planet's **colony capacity** (infrastructure readiness), not an immediate colonist population.
+- **Gameplay Loop:** Factorio‑style production chains + SimCity‑style infrastructure planning, with tension between **compliance** and **exploitation**, amplified by the presence and management of temporal accelerators.
 
 ---
 
@@ -28,8 +28,9 @@ Here’s a **formalized Planetary Facilities Codex** that captures the Factorio�
 
 ## 3. Timeframe & Pacing
 - **Space Construction:** Fast (stations in ~48 hours real time).  
-- **Planetary Facilities:** Slower (weeks/months of campaign time).  
-- **Diegetic Justification:** Atmosphere, geology, and biosphere complexity slow planetary prep, while vacuum + forcefields accelerate orbital builds.  
+- **Planetary Facilities (base):** Slower (weeks/months of campaign time) when built without temporal assistance.  
+- **Temporal Accelerators:** ISD‑deployed accelerators are specialized infrastructure that, once installed and powered, provide localized construction time compression for planetary facilities and assembly work. With an active accelerator, specific production and assembly tasks on the planet can run at accelerated rates (configurable by campaign tuning), reducing the effective calendar time needed to reach a target **colony capacity**.
+- **Diegetic Justification:** Atmosphere, geology, and biosphere complexity still constrain some processes, but temporal accelerators allow the Empire and Houses to prepare planets rapidly for later colonization without immediately moving people in.  
 
 ---
 
@@ -53,6 +54,8 @@ Here’s a **formalized Planetary Facilities Codex** that captures the Factorio�
 - **Reward:**  
   - Black‑market profits.  
   - Strategic leverage (hidden stockpiles, secret defenses).  
+
+- **Temporal Accelerator Risks & Management:** Temporal accelerators require large initial energy investments, certified stabilizers, and ISD oversight. Unauthorized overdrive or illicit sync‑links can produce localized anomalies, reduce production quality, or trigger Imperial audits and sanctions. Wardens contracted to operate or guard accelerators gain lucrative contracts but also elevated political risk.
 
 ---
 

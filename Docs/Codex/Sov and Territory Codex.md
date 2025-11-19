@@ -13,7 +13,7 @@
   - Once a campaign concludes, the Territory is considered “settled” and is normally not revisited in gameplay, but it remains in the lore.  
 
 - **Seasonal Content**  
-  - Each campaign represents a **season of conquest and colonization**.  
+  - Each campaign represents a **season of conquest and infrastructure‑building**: Houses and Wardens focus on claiming systems and constructing the planetary and orbital foundations (colony capacity) needed for future settlement.  
   - If Houses perform well, they may retain holdings as permanent **fiefdoms** when the Territory is absorbed into the Empire.  
   - Poor performance means losing claims, with the Empire redistributing systems to more loyal or effective Houses.  
 
@@ -39,9 +39,10 @@
 ---
 
 ## 🔄 Economic Reset & Imperial Eye Stargates
-- **Initial ISC Stargates**  
-  - At campaign start, the **Imperial Survey Corps (ISC)** provides temporary stargates with **very low mass throughput**.  
-  - These gates cannot move vast resources or fleets, forcing Houses and Corporations to **bootstrap the economy with local resources**.  
+ - **Initial ISC Stargates**  
+   - At campaign start, the **Imperial Survey Corps (ISC)** provides temporary stargates with **very low mass throughput**.  
+   - In parallel, Imperial Survey & Development (ISD) teams prioritize installing localized infrastructure such as assembly yards, stabilizers, and **temporal accelerators** on key world candidates. These accelerators compress local construction time for planetary facilities (subject to energy, stabilizer capacity, and ISD certification), enabling faster ramp‑up of **colony capacity** even while interstellar throughput is limited.  
+   - Because gates and accelerators are constrained, Houses and Corporations must bootstrap the economy with local resources while coordinating ISD priorities.  
 
 - **Bootstrapping Phase**  
   - Wardens must establish mining, refining, and manufacturing chains within the Territory.  

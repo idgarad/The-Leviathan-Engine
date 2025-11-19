@@ -166,15 +166,5 @@ P_{\text{hit}} = \frac{T}{T + \left(\frac{V_{\text{trans}}}{R}\right)^\alpha} \c
 - **Spoils of war**: Captured ships become valuable prizes, reinforcing salvage/ransom economy.  
 - **Warden role**: You’re not flying—you’re commanding.  
 
----
-
-✅ This **Final Unified Combat Codex** now integrates:  
-- Tank layers (Deflector → Absorption Shields → Armor → Hull → LIH).  
-- Targeting, transversal, dodge, EW, officers, certifications.  
-- Rules of Engagement (TEK, DSB, IRS, ransom insurance, salvage law).  
-- Critical strikes & spoils of war.  
-- Performance considerations for massive fleet battles.  
-- Lore justification for abstraction and diegetic lag.  
-
----
+---s
 

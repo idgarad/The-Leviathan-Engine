@@ -50,7 +50,7 @@ This creates a **triangular balance of power**:
 
 ### House Role
 - Houses scramble to:  
-  - Colonize and secure systems.  
+  - Build infrastructure and prepare colony capacity in systems.  
   - Extract wealth and resources.  
   - Sabotage rivals.  
   - Earn Imperial favor to retain systems post‑campaign.  
