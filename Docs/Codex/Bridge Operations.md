@@ -17,6 +17,11 @@
   - Provides a “crew discipline” buff—reduces randomness in execution.  
   - When Wardens are offline, the XO has autonomy to act (see Persistence & Autonomy).  
 
+- **Infrastructure Ties**  
+  - Coalitions and Houses may require ships to integrate into existing infrastructure for enhanced coordination.  
+  - Examples: Dedicating a scanning node to a system-wide unified sensor array, or tying transponders to a collective ship tracking system.  
+  - This provides buffs like improved fleet-wide sensor coverage or automated tracking, but may reduce individual ship autonomy or require resource allocation.  
+
 ---
 
 ## ⚙️ Department Definitions

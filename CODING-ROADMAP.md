@@ -424,7 +424,7 @@ Deliverables: impulse service, manager implementations (economic baseline), comp
 ---
 
 ## Sprint 14A (Week 29): Market Ledger & Order Book Infrastructure
-**Documents:** Market Managment Codex, Cargo & Storage, Sovereignty & Territory
+**Documents:** Market Management Codex, Cargo & Storage, Sovereignty & Territory
 
 - Implement station/regional order books with partial fills, taxation layers (Imperial, House, steward, facility), and escrow pipeline
 - Model reputation pledges, underwriter guarantees, and contract metadata emissions for espionage hooks
